@@ -1,0 +1,1008 @@
+Delivered-To: divyaeidiko9@gmail.com
+Received: from potomac1226.mktomail.com (potomac1226.mktomail.com. [192.28.150.226])
+	by mx.google.com with ESMTPS
+	id d13-20020ac800cd000000b0031bb4c05e35si14819435qtg
+	.198.2022.07.06.22.16.52        for
+	<divyaeidiko9@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+	Wed, 06 Jul 2022 22:16:53 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1tqTFz8km6cbOikaembKWFyGHQGOTJgTJ2iEf4eYawDoqDp52Q95pMTTEkk7fHjK+3X05nh
+X-Received: by 2002:ac8:5981:0:b0:31d:3c4e:bd77 with SMTP id
+ e1-20020ac85981000000b0031d3c4ebd77mr24520148qte.237.1657171013055;       
+ Wed, 06 Jul 2022 22:16:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1657171013; cv=none; d=google.com;
+	s=arc-20160816;
+	b=LHG0yu2iyz8GVMFZfsGjfQhQxnTA9jvLsKmyavDsx4jyBQiPUlI62UeHS/1dLlqq2EAbfR87kNK
+	RHXq8SXcsSJ84E1TnZuz1sGWg11KI0DvtC27LAPF914NIV3AsFhdr6OJ/vkrF3NG11Y+RZzKVtADo
+	VPdXA3iLCsrwjuLx70u9XG1zXqEkBDM1s/+N15r0jkeYv8PGG6oPkjJx+ydOsJV5E4WPzRpGOK1Le
+	ALlJ1owj2dRLtchMVS0qc9mzCWvaUw+1DgRUcECRZnMuFhkNbR6FCHj4ijOvwMIQVAuTmu7Q7zz3F
+	dTZe6lHlMH+aD6h1FtWxKH7d65mlQT15Zn4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from:date:
+	dkim-signature:dkim-signature;
+	bh=JmfE1pM77cGABTmEWPRyiEkQqkCOhuyxl0SSldiXWv0=;
+	b=z35VKG0QCADvsyEDhpGPxAUyRr9lWv+7rYxzN2tlGu8yE2y2rCE4PQnserzuWegayjlR4wDNeHi
+	mBQvDQJpH5lpR4BdRrEIKfesJQyk3nV2jJi5tNWHHyHTvpIsZNtfGS4eIuLrcWkZa0iP6lL+JzEqL
+	k0gXex8nn4MIOWeCtaNArehd37EpzqCksywja2sJeeuW9JeJqI/nqxKztdzQWSHi2IDksj0gfTd6J
+	BHjCnSlQTh1Q7crzQXV4pCi26bLNpP3gc70/F6+0dPfvisq+vGldW8+PNuUDWRBR6c/+cqRdsFqP1
+	aS0NhiN9t7hxjRaWz65iLvHSkhVpKtLJKLww==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@blueprism.info header.s=m1 header.b=d3z+aHlX;
+	dkim=pass header.i=@mktomail.com header.s=m1 header.b=GRRefGgX; spf=pass
+	(google.com: domain of 544-mlv-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com designates 192.28.150.226 as permitted sender)
+	smtp.mailfrom=
+	544-MLV-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com
+Return-Path: <544-MLV-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com>
+Received-SPF: pass (google.com: domain of
+ 544-mlv-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com designates
+ 192.28.150.226 as permitted sender) client-ip=192.28.150.226;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@blueprism.info header.s=m1 header.b=d3z+aHlX;
+	dkim=pass header.i=@mktomail.com header.s=m1 header.b=GRRefGgX; spf=pass
+	(google.com: domain of 544-mlv-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com designates 192.28.150.226 as permitted sender)
+	smtp.mailfrom=
+	544-MLV-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com
+X-MSFBL: ygC2v2cE2iiAxXAqK9WUVMMvZ5mbr0mp+h1Zo02Ztkg=|eyJnIjoiYmctYWItMDE
+	iLCJyIjoiZGl2eWFlaWRpa285QGdtYWlsLmNvbSIsInUiOiI1NDQtTUxWLTIzNDo
+	wOjQyODI6MTg4NjI6MDozNjIzOjk6NDE2MzE6NTQyMjQzMC0xIiwiYiI6ImR2cC0
+	xOTItMjgtMTUwLTIyNiJ9
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1657171011;
+	s=m1; d=mktomail.com; i=@mktomail.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=JmfE1pM77cGABTmEWPRyiEkQqkCOhuyxl0SSldiXWv0=;
+	b=GRRefGgX/0sontwhqy8NNyVbJC2RzbAYHjwOnz9hjWTZ0bIJrBaeKky6Keg9SWPlBfOTPe3iTFt
+	tpWWjncShW4vz9bYDC8w5Trc/J8DrUxGQ7TcVYCl7bOzeS/bui24sbjCu84D1EsDcatNZpONpHo7+
+	iqMFhgKAPIjiUKsWj+I=
+Date: Thu, 07 Jul 2022 00:16:51 -0500
+From: Blue Prism <contact@blueprism.info>
+Reply-To: contact@blueprism.com
+To: divyaeidiko9@gmail.com
+Message-ID: <472552020.11432166.1657171011205@abmktmail-trigger1f.marketo.org>
+Subject: You have one week left for your Trial
+MIME-Version: 1.0
+X-Binding: bg-ab-01
+X-MarketoID: 544-MLV-234:0:4282:18862:0:3623:9:41631:5422430-1
+X-Mailfrom: 544-MLV-234.0.41631.0.0.3623.9.5422430-1@potomac1050.mktomail.com
+List-Unsubscribe: =?utf-8?q?=3Cmailto=3ANRLVK4TEIRVEM42XPBDHCS3LGJ3DERDRIN3T2PI=3D=2E41631=2E3623=2E9?=
+ =?utf-8?q?=40unsub-ab=2Emktomail=2Ecom=3E?=
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+Uid: 35
+Folder: INBOX
+Sender: Blue Prism <contact@blueprism.info>
+PlainText: Hello Divya, You have one week left of your free 30 day Blue Prism
+ Trial.We wanted to share our Robotic Operating Model (ROM) with you. ROM
+ provides the framework you need to setup a digital workforce within your
+ organization.Learn more about ROM here
+ =?utf-8?q?=3Chttps=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-WdxDYRup?=
+ =?utf-8?q?s92A2yNbN7awuo2Dm4I3XXvSNg9hzra9Jvmag-c7wYkvKssBdH9AFuv5TPDI=3D?=
+ =?utf-8?q?=3E?= to create your RPA success story.${Button-Text} 
+ =?utf-8?q?=3Chttps=3A=2F=2Femail=2Eblueprism=2Einfo=2Fdc=2FTyTOrxmz22SGW307RMIKKL3sHYiU?=
+ =?utf-8?q?krhCyzGTTrpxMIQ=3D=2FNTQ0LU1MVi0yMzQAAAGFdg-Wd6fX=5F=5Fmm8YUcw-NVgOSS?=
+ =?utf-8?q?eD6gLRKBgQLZuWB7ek72b=5F8xuXtWxeKCXGbqABdz6SDDP14=3D=3EThe_Blue?=
+ Prism TeamContact
+ =?utf-8?q?=3Chttps=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wd=5FziwWI?=
+ =?utf-8?q?du3sn2QPnZOsRqdbz2Pn9tonu0eMzv1W-fNlr=5Fh0c2CP4l6QqHorWZi4C48g=3D?=
+ =?utf-8?q?=3E=C2=A0_Privacy_Policy?=
+ =?utf-8?q?_=3Chttps=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wd2Ig7n8?=
+ =?utf-8?q?OIAZ8pUiojdWgLw4Z7sErkGbbLq0a=5FuxHjT7VALZwJoJgFiR=5Fif-JRW1G5Pw=3D?=
+ =?utf-8?q?=3E_|_To=C2=A0manage_your_email_preferences=C2=A0click_here?=
+ =?utf-8?q?_=3Chttps=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-WdzLb6Hq?=
+ =?utf-8?q?-DnvtFNJHMUNfneYKjiQTPgaxVcNQRVzUF4Q0cWGMHWBQ4V3POq22MMFIe6A=3D?=
+ =?utf-8?b?PiDCqQ==?= 2019 Blue Prism Limited.
+ =?utf-8?b?4oCcQmx1ZSBQcmlzbeKAnSwgdGhlIOKAnEJsdWUgUHJpc23igJ0=?= logo and
+ Prism device are either trademarks or registered trademarks of Blue Prism
+ Limited. All Rights Reserved.BLUE PRISM LOCATIONS  United States: Plaza 7000,
+ 7000 North Mopac Expressway, Suite 200, Office 2142, Austin, TX 78731 USA 
+ Australia: Level 20, Tower 2 Darling Park, 201 Sussex Street, Sydney, New
+ South Wales, NSW 2000  France: 40 rue du =?utf-8?b?Q29saXPDqWUs?= Paris 75008 
+ Germany: Theatinerstrasse 11, 80333 =?utf-8?b?TcO8bmNoZW4=?=  India: #1425
+ Level 14, Concorde Tower, UB City, 1 Vittal Mallya Road, Bangalore 560001 
+ Japan: 14F Kamiyacho MT Building, 4-3-20, Toranomon, Minato-ku, Tokyo
+ 105-0001 Singapore: MBFC Tower 3 Level, 17-01 12 Marina Boulevard, Singapore,
+ 018982United Kingdom: Prism One, 2 Cinnamon Park, Crab Lane, Warrington, WA2
+ 0XP, England.
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"><head> <!--[if gte mso 9]>   
+ <xml>      <o:OfficeDocumentSettings>        <o:AllowPNG/>       
+ <o:PixelsPerInch>96</o:PixelsPerInch>      </o:OfficeDocumentSettings>   
+ </xml>    <![endif]--> <!--Default Colors Begin - Use Find and Replace to
+ update--> <!--#0F4B8F (Color Band, Divider)--> <!--#F15F43 (Button Color,
+ Button Border Color)--> <!--Default Colors End--> <!--Global Variables
+ Begin-->          <!--Global Variables End--> <!--Color Band Module Variables
+ Begin-->   <!--Color Band Module Variables End--> <!--Banner Module Variables
+ Begin-->    <!--Banner Module Variables End--> <!--Title Module Variables
+ Begin-->     <!--Title Module Variables End--> <!--FreeText Module Variables
+ Begin-->    <!--FreeText Module Variables End--> <!--Button Module Variables
+ Begin-->            <!--Button Module Variables End--> <!--Divider Module
+ Variables Begin-->       <!--Divider Module Variables End--> <!--Other Meta
+ Tags Begin--> <meta http-equiv="Content-Type" content="text/html;
+ charset=UTF-8" /> <meta name="viewport" content="width=device-width,
+ initial-scale=1, minimum-scale=1, maximum-scale=1" /> <meta name="robots"
+ content="noindex,nofollow" /> <meta http-equiv="X-UA-Compatible"
+ content="IE=edge" /> <!--Other Meta Tags End--> <!--[if mso]>    <style
+ type='text/css'>      .primary-font {      font-family: Arial, sans-serif
+ !important;      }    </style>    <![endif]--> <!--[if mso]>    <style
+ type='text/css'>      .secondary-font {      font-family: Arial, sans-serif
+ !important;      }    </style>    <![endif]--> <!--[if gte mso 9]>    <style
+ type="text/css">      #hero .table3-3{      width: 100% !important;      }   
+ </style>    <![endif]--> <style>      /*startcommon*/      @media only screen
+ and (max-width: 803px) {      .m_hero .background {      background-size:
+ cover !important;      }      }      /*endcommon*/    </style> <!--[if
+ mso]><style>.outlookbutton {padding-left:60px !important}</style><![endif]-->
+ <style media="all">      /* CLIENT-SPECIFIC STYLES */      #outlook a {     
+ padding: 0;      }      /* Force Outlook to provide a "view in browser"
+ message */      .ReadMsgBody {      width: 100%;      }      .ExternalClass {     
+ width: 100%;      }      /* Force Hotmail to display emails at full width */     
+ .ExternalClass,      .ExternalClass p,      .ExternalClass span,     
+ .ExternalClass font,      .ExternalClass td,      .ExternalClass div {     
+ line-height: 100%;      }      /* Force Hotmail to display normal line
+ spacing */      /* iOS BLUE LINKS */      @-ms-viewport {      width:
+ device-width;      }    </style> <style type="text/css">      html {
+ -webkit-text-size-adjust:none; }      p {margin: 0 0 10px !important;padding:
+ 0;}      body{font-family:Lato, Calibri, sans-serif;}     
+ a[x-apple-data-detectors] {      color: inherit !important;     
+ text-decoration: none !important;      font-size: inherit !important;     
+ font-family: inherit !important;      font-weight: inherit !important;     
+ line-height: inherit !important;      }      a{outline: none !important;
+ text-decoration:none !important;}      @media only screen and (max-width:
+ 640px){      .em_main_table {      width: 100% !important;      }     
+ .em_spc_20 {      height: 20px !important;      }      .em_hide {     
+ display: none !important;      }      .m_hero .background {     
+ background-size: cover !important;      }      table[class="table600"] {     
+ width: 450px !important;      }      *[class].main {width:100%
+ !important;min-width:100% !important;}      *[class].inner_table{width:90%
+ !important;min-width:90% !important;}      *[class].block{width:100%
+ !important;margin:0 auto !important;padding:0 !important;display:block;}     
+ *[class].center_align{text-align:center !important;margin:0 auto;}     
+ *[class].left_align{text-align:left !important;}     
+ *[class].padding_bottom{padding-bottom:20px !important;}     
+ *[class].padding_top{padding-top:20px !important;}      *[class].image-width
+ img{width:100% !important;height:auto !Important;}     
+ *[class].line-height{line-height:36px !important;}     
+ *[class].button_width{width:100% !important;}      *[class].Video
+ img{max-width:100% !important;height:auto !Important;}     
+ *[class].margin-top{margin-top:20px !important;}     
+ *[class].float{float:none !important;margin-top:14px
+ !Important;display:inline-block;}      *[class].button_width{width:100%
+ !Important;}      }      @media only screen and (max-width: 479px){     
+ .m_hero .background {      background-size: cover !important;      }     
+ .em_spc_20 {      height: 20px !important;      }      .em_hide {     
+ display: none !important;      }      .em_main_table {      width: 100%
+ !important;      }      table[class="table600"] {      width: 290px
+ !important;      }      *[class].main {width:100% !important;min-width:100%
+ !important;}      *[class].inner_table{width:90% !important;min-width:90%
+ !important;}      *[class].block{width:100% !important;margin:0 auto
+ !important;padding:0 !important;display:block;}     
+ *[class].center_align{text-align:center !important;margin:0 auto;}     
+ *[class].left_align{text-align:left !important;}     
+ *[class].padding_top{padding-top:20px !important;}     
+ *[class].padding_bottom{padding-bottom:20px !important;}     
+ *[class].image-width img{width:100% !important;height:auto !Important;}     
+ *[class].img-width img{width:100% !important;height:auto !Important;}     
+ *[class].line-height{line-height:36px !important;}     
+ *[class].button_width{width:100% !important;}      *[class].Video
+ img{max-width:100% !important;height:auto !Important;}     
+ *[class].margin-top{margin-top:20px !important;}     
+ *[class].float{float:none !important;margin-top:14px
+ !Important;display:inline-block;}      *[class].button_width{width:100%
+ !Important;}      }    </style> </head> <body
+ style="background-color:#D5E3EF;margin-bottom: 0; -webkit-text-size-adjust:
+ 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-right: 0;
+ -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 0; padding-right: 0;
+ padding-left: 0; width: 100%;"> <!--Outer table START--> <table border="0"
+ cellpadding="0" cellspacing="0" width="100%" style="-webkit-text-size-adjust:
+ 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:
+ 0pt; border-spacing: 0; border-collapse: collapse;margin:0 auto;"> <tbody>
+ <tr> <td class="outer" valign="top" style="-webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens:
+ none; border-collapse: collapse;"> <!--Header starts--> <table width="640"
+ class="main" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust:
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin:0 auto;
+ border-spacing: 0; border-collapse: collapse;" align="center" border="0"
+ cellpadding="0" cellspacing="0"> <tbody><tr> <td bgcolor="#ffffff"
+ style="border-collapse:collapse; background-color:#ffffff;"> <table
+ class="inner_table" style="margin:0 auto;width:600px;" align="center"
+ border="0" cellpadding="0" cellspacing="0" width="600"> <!--Extra Space-->
+ <tbody><tr> <td height="15" style="line-height:1px;font-size:1px;">&nbsp;
+ </td> </tr> <tr> <td width="120" class="center_align padding_bottom"
+ valign="middle" align="left"> <div class="mktoImg" id="Logo-bp"
+ mktolockimgsize="true"><a href=" https://www.blueprism.com/"
+ target="_blank"><img
+ src="https://pages.blueprism.info/rs/544-MLV-234/images/logo_bp_prims.png"
+ width="250" alt="Blue Prism" style="" /></a></div> </td> <td width="120"
+ class="center_align padding_bottom" valign="top" align="right"> <div
+ class="mktoImg" id="prism-bp"> <img border="0" width="105" style="" /> </div>
+ </td> </tr> <!--Extra Space--> <tr> <td height="15"
+ style="line-height:1px;font-size:1px;">&nbsp; </td> </tr> </tbody></table>
+ </td> </tr> </tbody></table> <!--Header ends--> <table class="main"
+ width="640" align="center" id="boxing" border="0" cellpadding="0"
+ cellspacing="0" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust:
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;margin:0 auto;min-width:640px;"> <tbody><tr> <td
+ class="mktoContainer boxedbackground" id="module-wrapper"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;
+ -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse:
+ collapse;"><table class="mktoModule"
+ id="ColorBand57879679-6d94-4703-8702-cb8cc52eb18f"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#0F4B8F"
+ style="background-color:#0F4B8F"> <table cellpadding="0" cellspacing="0"
+ border="0" width="100%"> <tbody> <tr> <td height="10"
+ style="font-size:1px;line-height:1px;">&nbsp; </td> </tr> </tbody> </table>
+ </td> </tr> </tbody> </table><table class="mktoModule"
+ id="Banner1de24593-5f00-4ae1-b8e9-cea5967864c9" style="
+ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace:
+ 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody> <tr> <td valign="top" bgcolor="#FFFFFF"> <table class="main"
+ style="width: 640px; margin: 0 auto; border-collapse: collapse;"
+ align="center" cellpadding="0" cellspacing="0" width="640"> <tbody> <!--Extra
+ space--> <tr> <td style="line-height: 0px; font-size: 0px;" height="0">&nbsp;
+ </td> </tr> <tr> <td align="center" class="image-width" style="font-size:
+ 1px;line-height: 1px;"> <div class="mktoImg"
+ id="Banner21de24593-5f00-4ae1-b8e9-cea5967864c9" mktolockimgsize="true"> <img
+ border="0"
+ src="https://pages.blueprism.info/rs/544-MLV-234/images/background.jpg"
+ width="640" style="" /> </div> </td> </tr> <!--Extra space--> <tr> <td
+ style="line-height: 0px; font-size: 0px;" height="0">&nbsp; </td> </tr>
+ </tbody> </table> </td> </tr> </tbody> </table><table class="mktoModule"
+ id="FreeText" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust:
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#FFFFFF"
+ style="background-color:#FFFFFF"> <table class="inner_table" style="width:
+ 600px; margin: 0 auto; text-align: center; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+ <!--Extra space--> <tbody> <tr> <td style="line-height: 1px; font-size: 1px;"
+ height="20">&nbsp;</td> </tr> <tr> <td style="font-size:14px; color:#000000;
+ font-family:Arial,Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:20px;text-align:left;" valign="top"> <div id="FreeTextContent"
+ class="mktoText"> <div> <span style="font-family: arial, helvetica,
+ sans-serif; font-size: 14px; color: #000000;">Hello Divya, <br /></span> <br
+ /> </div> <div> <span style="font-family: arial, helvetica, sans-serif;
+ font-size: 14px; color: #000000;"><span style="margin: 0px; padding: 0px;
+ user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+ transparent; font-kerning: none; line-height: 19.425px;
+ font-variant-ligatures: none !important;" data-contrast="auto"><span
+ style="margin: 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+ -webkit-tap-highlight-color: transparent; background-color: inherit;">You
+ have one week left of your free 30 day Blue Prism Trial.<br /><br
+ /></span></span></span> </div> <div> <span style="font-family: arial,
+ helvetica, sans-serif; font-size: 14px; color: #000000;"><span style="margin:
+ 0px; padding: 0px; user-select: text; -webkit-user-drag: none;
+ -webkit-tap-highlight-color: transparent; font-kerning: none; line-height:
+ 19.425px; font-variant-ligatures: none !important;"
+ data-contrast="auto"><span style="margin: 0px; padding: 0px; user-select:
+ text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent;
+ background-color: inherit;">We wanted to share our Robotic Operating Model
+ (ROM) with you. ROM provides the framework you need to setup a digital
+ workforce within your organization.<br /><br />Learn more about <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wdx?=
+ =?utf-8?q?DYRups92A2yNbN7awuo2Dm4I3XXvSNg9hzra9Jvmag-c7wYkvKssBdH9AFuv5?=
+ =?utf-8?q?TPDI=3D=22?= target="_blank" id="">ROM here</a> to create your RPA
+ success story.<br /></span></span></span> </div> </div> </td> </tr> <!--Extra
+ space--> <tr> <td style="line-height: 1px; font-size: 1px;"
+ height="20">&nbsp;</td> </tr> </tbody> </table> </td> </tr> </tbody>
+ </table><table class="mktoModule" id="Button"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#FFFFFF"
+ style="background-color:#FFFFFF"> <table class="inner_table"
+ style="width:600px; margin: 0 auto; text-align: center; border-collapse:
+ collapse;" align="center" border="0" cellpadding="0" cellspacing="0"
+ width="600"> <!--Extra space--> <tbody> <tr> <td style="line-height: 1px;
+ font-size: 1px;" height="20">&nbsp;</td> </tr> <!--CTA button--> <tr> <td
+ valign="top"> <div class="mktoText" id="banner-button1"> <table
+ style="margin:0 auto;" width="auto" align="center" border="0" cellpadding="0"
+ cellspacing="0"> <tbody> <tr> <td style="background-color: #F15F43;
+ border:1px solid
+ #F15F43;border-radius:3px;font-family:Arial,Helvetica,sans-serif; font-size:
+ 16px; mso-line-height-rule: exactly; line-height:22px ; text-align: center;
+ vertical-align: middle; color: #FFFFFF; display: block; padding:9px 40px
+ 8px;" valign="middle"> <a style="text-decoration: none; color: #FFFFFF
+ !important;outline: none;"
+ =?utf-8?q?href=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wd2?=
+ =?utf-8?q?iDfs=5FByjf79eTJmo2LEzKdAjEQcCAr6GINfzN9nc3EGobFDPzfBwQTWWdfjgA?=
+ =?utf-8?q?=5FkEY=3D=22=3E?= <span style="color:#FFFFFF;">What is ROM</span>
+ </a> </td> </tr> </tbody> </table> </div> </td> </tr> <tr> <td
+ style="line-height: 1px; font-size: 1px;" height="20">&nbsp;</td> </tr>
+ </tbody> </table> </td> </tr> </tbody> </table><table class="mktoModule"
+ id="FreeTextbc772858-149e-4e69-ae25-cd647a9ef759"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#FFFFFF"
+ style="background-color:#FFFFFF"> <table class="inner_table" style="width:
+ 600px; margin: 0 auto; text-align: center; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+ <!--Extra space--> <tbody> <tr> <td style="line-height: 1px; font-size: 1px;"
+ height="20">&nbsp;</td> </tr> <tr> <td style="font-size:14px; color:#000000;
+ font-family:Arial,Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:20px;text-align:left;" valign="top"> <div
+ id="FreeTextContentbc772858-149e-4e69-ae25-cd647a9ef759" class="mktoText">
+ <p>The Blue Prism Team<br /></p> </div> </td> </tr> <!--Extra space--> <tr>
+ <td style="line-height: 1px; font-size: 1px;" height="20">&nbsp;</td> </tr>
+ </tbody> </table> </td> </tr> </tbody> </table></td> </tr> </tbody></table>
+ </td> </tr> </tbody> </table> <!--Outer table End--> <!--Footer Begin-->
+ <table class="main" style="-webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-spacing: 0; border-collapse: collapse;margin:0 auto;" align="center"
+ border="0" cellpadding="0" cellspacing="0" width="640"> <tbody><tr> <td
+ bgcolor="#0F4B8F" style="border-collapse:collapse" ;=""
+ background-color:#0F4B8F;"=""> <table class="inner_table" style="margin:0
+ auto;width:600px;" align="center" border="0" cellpadding="0" cellspacing="0"
+ width="600"> <!--Extra Space--> <tbody><tr> <td height="10"
+ style="line-height:1px;font-size:1px;">&nbsp; </td> </tr> <tr> </tr><tr> <td
+ valign="center" height="66px" style="font-size:12px; color:#FFFFFF;
+ font-family:Arial,Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:66px;text-align:left;"> <div class="mktoImg" id="logofooter"
+ mktolockimgsize="true"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wdw?=
+ =?utf-8?q?LuwE15nCq2bLLLNJ3IF8BdFC1=5FmZbC8joUXrFPDKckPiN1nAspPdNCPSugPqa?=
+ =?utf-8?q?s=5FSQ=3D=22_target=3D=22=5Fblank=22=3E=3Cimg?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Fpages=2Eblueprism=2Einfo=2Frs=2F544-MLV-234=2Fimages=2Flogo=5F?=
+ =?utf-8?q?bp=5Fprims=5Fwhite=2Epng=22?= width="150" alt="Logo"
+ style="display:block;  font-family:Arial, sans-serif; font-weight:bold;
+ text-align:center; max-width:200px;" /></a></div> </td> </tr> <!--Extra
+ Space--> <tr> <td height="10" style="line-height:1px;font-size:1px;">&nbsp;
+ </td> </tr> </tbody></table> </td> </tr> </tbody></table> <!--Footer End-->
+ <!--Copyright and Unsubscribe--> <table class="inner_table" style="width:
+ 600px; margin: 0 auto; text-align: center; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+ <tbody><tr><td align="center" valign="top" style="font-family:'Source Sans
+ Pro', Arial, sans-serif; font-size:10px; color:#000000; line-height:16px;
+ padding:10px;"> <div class="mktoText" id="unsubscribe"><p><span
+ style="text-decoration: underline;"><a style="text-decoration: underline;
+ color: #0f7dc2;"
+ =?utf-8?q?href=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wd=5F?=
+ =?utf-8?q?ziwWIdu3sn2QPnZOsRqdbz2Pn9tonu0eMzv1W-fNlr=5Fh0c2CP4l6QqHorWZi4?=
+ =?utf-8?q?C48g=3D=22=3EContact=3C=2Fa=3E=3C=2Fspan=3E&nbsp=3B?= <span
+ style="text-decoration: underline;"><span style="color: #0f7dc2;"><a
+ style="text-decoration: underline; color: #0f7dc2;"
+ =?utf-8?q?href=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wd2?=
+ =?utf-8?q?Ig7n8OIAZ8pUiojdWgLw4Z7sErkGbbLq0a=5FuxHjT7VALZwJoJgFiR=5Fif-JRW1?=
+ =?utf-8?q?G5Pw=3D=22=3EPrivacy?= Policy</a></span></span> | To&nbsp;manage
+ your email preferences&nbsp;<span style="text-decoration: underline;"><span
+ style="color: #0f7dc2;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2FNTQ0LU1MVi0yMzQAAAGFdg-Wdz?=
+ =?utf-8?q?Lb6Hq-DnvtFNJHMUNfneYKjiQTPgaxVcNQRVzUF4Q0cWGMHWBQ4V3POq22MMF?=
+ =?utf-8?q?Ie6A=3D=22?= target="_blank" style="text-decoration: underline;
+ color: #0f7dc2;">click here</a></span></span><br /> =?utf-8?b?wqk=?= 2019
+ Blue Prism Limited.
+ =?utf-8?b?4oCcQmx1ZSBQcmlzbeKAnSwgdGhlIOKAnEJsdWUgUHJpc23igJ0=?= logo and
+ Prism device are either trademarks or registered trademarks of Blue Prism
+ Limited. All Rights Reserved.</p></div> </td></tr> <tr><td align="center"
+ valign="top" style="font-family:'Source Sans Pro', Arial, sans-serif;
+ font-size:10px; color:#000000; line-height:16px; padding:10px;"> <div
+ class="mktoText" id="locations"><p><strong>BLUE PRISM LOCATIONS</strong> <br
+ /> United States: Plaza 7000, 7000 North Mopac Expressway, Suite 200, Office
+ 2142, Austin, TX 78731 USA <br /> Australia: Level 20, Tower 2 Darling Park,
+ 201 Sussex Street, Sydney, New South Wales, NSW 2000 <br /> France: 40 rue du
+ =?utf-8?b?Q29saXPDqWUs?= Paris 75008 <br /> Germany: Theatinerstrasse 11,
+ 80333 =?utf-8?b?TcO8bmNoZW4=?= <br /> India: #1425 Level 14, Concorde Tower,
+ UB City, 1 Vittal Mallya Road, Bangalore 560001 <br /> Japan: 14F Kamiyacho
+ MT Building, 4-3-20, Toranomon, Minato-ku, Tokyo 105-0001 <br />Singapore:
+ MBFC Tower 3 Level, 17-01 12 Marina Boulevard, Singapore, 018982<br />United
+ Kingdom: Prism One, 2 Cinnamon Park, Crab Lane, Warrington, WA2 0XP,
+ England</p></div> </td></tr> </tbody></table>  <img
+ =?utf-8?q?src=3D=22https=3A=2F=2Femail=2Eblueprism=2Einfo=2Ftrk=3Ft=3D1&mid=3DNTQ0LU1MVi0yMzQ?=
+ =?utf-8?q?6MDo0MjgyOjE4ODYyOjA6MzYyMzo5OjQxNjMxOjU0MjI0MzAtMTpudWxs=22?=
+ width="1" height="1" style="display:none !important;" alt="" /><!--This is a
+ comment --></body></html>
+Content-Type: multipart/alternative; boundary="=-ca04E8vbev8hiTmkF5fYnw=="
+
+--=-ca04E8vbev8hiTmkF5fYnw==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <d4ef76b3-f039-4dc1-9d34-651e1c4da37c>
+
+Hello Divya,=20
+
+
+You have one week left of your free 30 day Blue Prism Trial.
+
+
+We wanted to share our Robotic Operating Model (ROM) with you. ROM provides =
+the framework you need to setup a digital workforce within your organization=
+.
+
+Learn more about ROM here <https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGF=
+dg-WdxDYRups92A2yNbN7awuo2Dm4I3XXvSNg9hzra9Jvmag-c7wYkvKssBdH9AFuv5TPDI=3D> =
+to create your RPA success story.
+${Button-Text}  <https://email.blueprism.info/dc/TyTOrxmz22SGW307RMIKKL3sHYi=
+UkrhCyzGTTrpxMIQ=3D/NTQ0LU1MVi0yMzQAAAGFdg-Wd6fX__mm8YUcw-NVgOSSeD6gLRKBgQLZ=
+uWB7ek72b_8xuXtWxeKCXGbqABdz6SDDP14=3D>
+The Blue Prism Team
+Contact <https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-Wd_ziwWIdu3sn2Q=
+PnZOsRqdbz2Pn9tonu0eMzv1W-fNlr_h0c2CP4l6QqHorWZi4C48g=3D>=C2=A0 Privacy Poli=
+cy <https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-Wd2Ig7n8OIAZ8pUiojdW=
+gLw4Z7sErkGbbLq0a_uxHjT7VALZwJoJgFiR_if-JRW1G5Pw=3D> | To=C2=A0manage your e=
+mail preferences=C2=A0click here <https://email.blueprism.info/NTQ0LU1MVi0yM=
+zQAAAGFdg-WdzLb6Hq-DnvtFNJHMUNfneYKjiQTPgaxVcNQRVzUF4Q0cWGMHWBQ4V3POq22MMFIe=
+6A=3D>
+ =C2=A9 2019 Blue Prism Limited. =E2=80=9CBlue Prism=E2=80=9D, the =E2=80=9C=
+Blue Prism=E2=80=9D logo and Prism device are either trademarks or registere=
+d trademarks of Blue Prism Limited. All Rights Reserved.
+BLUE PRISM LOCATIONS=20
+ United States: Plaza 7000, 7000 North Mopac Expressway, Suite 200, Office 2=
+142, Austin, TX 78731 USA=20
+ Australia: Level 20, Tower 2 Darling Park, 201 Sussex Street, Sydney, New S=
+outh Wales, NSW 2000=20
+ France: 40 rue du Colis=C3=A9e, Paris 75008=20
+ Germany: Theatinerstrasse 11, 80333 M=C3=BCnchen=20
+ India: #1425 Level 14, Concorde Tower, UB City, 1 Vittal Mallya Road, Banga=
+lore 560001=20
+ Japan: 14F Kamiyacho MT Building, 4-3-20, Toranomon, Minato-ku, Tokyo 105-0=
+001=20
+Singapore: MBFC Tower 3 Level, 17-01 12 Marina Boulevard, Singapore, 018982
+United Kingdom: Prism One, 2 Cinnamon Park, Crab Lane, Warrington, WA2 0XP, =
+England
+
+.
+
+--=-ca04E8vbev8hiTmkF5fYnw==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <373a88a3-578d-406d-a9c7-147228721e10>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w=
+3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>=20
+<!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->=20
+<!--Default Colors Begin - Use Find and Replace to update-->=20
+<!--#0F4B8F (Color Band, Divider)-->=20
+<!--#F15F43 (Button Color, Button Border Color)-->=20
+<!--Default Colors End-->=20
+<!--Global Variables Begin-->         =20
+<!--Global Variables End-->=20
+<!--Color Band Module Variables Begin-->  =20
+<!--Color Band Module Variables End-->=20
+<!--Banner Module Variables Begin-->   =20
+<!--Banner Module Variables End-->=20
+<!--Title Module Variables Begin-->    =20
+<!--Title Module Variables End-->=20
+<!--FreeText Module Variables Begin-->   =20
+<!--FreeText Module Variables End-->=20
+<!--Button Module Variables Begin-->           =20
+<!--Button Module Variables End-->=20
+<!--Divider Module Variables Begin-->      =20
+<!--Divider Module Variables End-->=20
+<!--Other Meta Tags Begin-->=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1, =
+minimum-scale=3D1, maximum-scale=3D1" />=20
+<meta name=3D"robots" content=3D"noindex,nofollow" />=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+<!--Other Meta Tags End-->=20
+<!--[if mso]>
+    <style type=3D'text/css'>
+      .primary-font {
+      font-family: Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->=20
+<!--[if mso]>
+    <style type=3D'text/css'>
+      .secondary-font {
+      font-family: Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->=20
+<!--[if gte mso 9]>
+    <style type=3D"text/css">
+      #hero .table3-3{
+      width: 100% !important;
+      }
+    </style>
+    <![endif]-->=20
+<style>
+      /*startcommon*/
+      @media only screen and (max-width: 803px) {
+      .m_hero .background {
+      background-size: cover !important;
+      }
+      }
+      /*endcommon*/
+    </style>=20
+<!--[if mso]>
+<style>
+.outlookbutton {
+padding-left:60px !important
+}
+
+</style>
+<![endif]-->=20
+<style media=3D"all">
+      /* CLIENT-SPECIFIC STYLES */
+      #outlook a {
+      padding: 0;
+      }
+      /* Force Outlook to provide a "view in browser" message */
+      .ReadMsgBody {
+      width: 100%;
+      }
+      .ExternalClass {
+      width: 100%;
+      }
+      /* Force Hotmail to display emails at full width */
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+      line-height: 100%;
+      }
+      /* Force Hotmail to display normal line spacing */
+      /* iOS BLUE LINKS */
+      @-ms-viewport {
+      width: device-width;
+      }
+    </style>=20
+<style type=3D"text/css">
+      html { -webkit-text-size-adjust:none; }
+      p {margin: 0 0 10px !important;padding: 0;}
+      body{font-family:Lato, Calibri, sans-serif;}
+      a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      }
+      a{outline: none !important; text-decoration:none !important;}
+      @media only screen and (max-width: 640px){
+      .em_main_table {
+      width: 100% !important;
+      }
+      .em_spc_20 {
+      height: 20px !important;
+      }
+      .em_hide {
+      display: none !important;
+      }
+      .m_hero .background {
+      background-size: cover !important;
+      }
+      table[class=3D"table600"] {
+      width: 450px !important;
+      }
+      *[class].main {width:100% !important;min-width:100% !important;}
+      *[class].inner_table{width:90% !important;min-width:90% !important;}
+      *[class].block{width:100% !important;margin:0 auto !important;padding:=
+0 !important;display:block;}
+      *[class].center_align{text-align:center !important;margin:0 auto;}
+      *[class].left_align{text-align:left !important;}
+      *[class].padding_bottom{padding-bottom:20px !important;}
+      *[class].padding_top{padding-top:20px !important;}
+      *[class].image-width img{width:100% !important;height:auto !Important;=
+}
+      *[class].line-height{line-height:36px !important;}
+      *[class].button_width{width:100% !important;}
+      *[class].Video img{max-width:100% !important;height:auto !Important;}
+      *[class].margin-top{margin-top:20px !important;}
+      *[class].float{float:none !important;margin-top:14px !Important;displa=
+y:inline-block;}
+      *[class].button_width{width:100% !Important;}
+      }
+      @media only screen and (max-width: 479px){
+      .m_hero .background {
+      background-size: cover !important;
+      }
+      .em_spc_20 {
+      height: 20px !important;
+      }
+      .em_hide {
+      display: none !important;
+      }
+      .em_main_table {
+      width: 100% !important;
+      }
+      table[class=3D"table600"] {
+      width: 290px !important;
+      }
+      *[class].main {width:100% !important;min-width:100% !important;}
+      *[class].inner_table{width:90% !important;min-width:90% !important;}
+      *[class].block{width:100% !important;margin:0 auto !important;padding:=
+0 !important;display:block;}
+      *[class].center_align{text-align:center !important;margin:0 auto;}
+      *[class].left_align{text-align:left !important;}
+      *[class].padding_top{padding-top:20px !important;}
+      *[class].padding_bottom{padding-bottom:20px !important;}
+      *[class].image-width img{width:100% !important;height:auto !Important;=
+}
+      *[class].img-width img{width:100% !important;height:auto !Important;}
+      *[class].line-height{line-height:36px !important;}
+      *[class].button_width{width:100% !important;}
+      *[class].Video img{max-width:100% !important;height:auto !Important;}
+      *[class].margin-top{margin-top:20px !important;}
+      *[class].float{float:none !important;margin-top:14px !Important;displa=
+y:inline-block;}
+      *[class].button_width{width:100% !Important;}
+      }
+    </style>=20
+</head>=20
+<body style=3D"background-color:#D5E3EF;margin-bottom: 0; -webkit-text-size-=
+adjust: 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-righ=
+t: 0; -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 0; padding-ri=
+ght: 0; padding-left: 0; width: 100%;">=20
+<!--Outer table START-->=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collap=
+se;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"outer" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; wo=
+rd-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: no=
+ne; border-collapse: collapse;">=20
+<!--Header starts-->=20
+<table width=3D"640" class=3D"main" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; m=
+argin:0 auto; border-spacing: 0; border-collapse: collapse;" align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"border-collapse:collapse; background-color:=
+#ffffff;">=20
+<table class=3D"inner_table" style=3D"margin:0 auto;width:600px;" align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra Space-->=20
+<tbody>
+<tr>=20
+<td height=3D"15" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"120" class=3D"center_align padding_bottom" valign=3D"middle" al=
+ign=3D"left">=20
+<div class=3D"mktoImg" id=3D"Logo-bp" mktolockimgsize=3D"true">
+<a href=3D" https://www.blueprism.com/" target=3D"_blank"><img src=3D"https:=
+//pages.blueprism.info/rs/544-MLV-234/images/logo_bp_prims.png" width=3D"250=
+" alt=3D"Blue Prism" style=3D"" /></a>
+</div> </td>=20
+<td width=3D"120" class=3D"center_align padding_bottom" valign=3D"top" align=
+=3D"right">=20
+<div class=3D"mktoImg" id=3D"prism-bp">=20
+<img border=3D"0" width=3D"105" style=3D"" />=20
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"15" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--Header ends-->=20
+<table class=3D"main" width=3D"640" align=3D"center" id=3D"boxing" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; border-spacing: 0; border-collapse: collapse;margin:0 auto;min-width:640p=
+x;">=20
+<tbody>
+<tr>=20
+<td class=3D"mktoContainer boxedbackground" id=3D"module-wrapper" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; =
+-moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+<table class=3D"mktoModule" id=3D"ColorBand57879679-6d94-4703-8702-cb8cc52eb=
+18f" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collap=
+se: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#0F4B8F" style=3D"background-color:#0F4B8F">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td height=3D"10" style=3D"font-size:1px;line-height:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Banner1de24593-5f00-4ae1-b8e9-cea5967864c9=
+" style=3D" -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse=
+: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td valign=3D"top" bgcolor=3D"#FFFFFF">=20
+<table class=3D"main" style=3D"width: 640px; margin: 0 auto; border-collapse=
+: collapse;" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"6=
+40">=20
+<tbody>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 0px;" height=3D"0">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td align=3D"center" class=3D"image-width" style=3D"font-size: 1px;line-heig=
+ht: 1px;">=20
+<div class=3D"mktoImg" id=3D"Banner21de24593-5f00-4ae1-b8e9-cea5967864c9" mk=
+tolockimgsize=3D"true">=20
+<img border=3D"0" src=3D"https://pages.blueprism.info/rs/544-MLV-234/images/=
+background.jpg" width=3D"640" style=3D"" />=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 0px;" height=3D"0">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeText" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,sans=
+-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" va=
+lign=3D"top">=20
+<div id=3D"FreeTextContent" class=3D"mktoText">=20
+<div>=20
+<span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px; c=
+olor: #000000;">Hello Divya, <br /></span>=20
+<br />=20
+</div>=20
+<div>=20
+<span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px; c=
+olor: #000000;"><span style=3D"margin: 0px; padding: 0px; user-select: text;=
+ -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-ker=
+ning: none; line-height: 19.425px; font-variant-ligatures: none !important;"=
+ data-contrast=3D"auto"><span style=3D"margin: 0px; padding: 0px; user-selec=
+t: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; =
+background-color: inherit;">You have one week left of your free 30 day Blue =
+Prism Trial.<br /><br /></span></span></span>=20
+</div>=20
+<div>=20
+<span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px; c=
+olor: #000000;"><span style=3D"margin: 0px; padding: 0px; user-select: text;=
+ -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; font-ker=
+ning: none; line-height: 19.425px; font-variant-ligatures: none !important;"=
+ data-contrast=3D"auto"><span style=3D"margin: 0px; padding: 0px; user-selec=
+t: text; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; =
+background-color: inherit;">We wanted to share our Robotic Operating Model (=
+ROM) with you. ROM provides the framework you need to setup a digital workfo=
+rce within your organization.<br /><br />Learn more about <a href=3D
+"https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-WdxDYRups92A2yNbN7awuo2=
+Dm4I3XXvSNg9hzra9Jvmag-c7wYkvKssBdH9AFuv5TPDI=3D" target=3D"_blank" id=3D""
+>ROM here</a> to create your RPA success story.<br /></span></span></span>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"Button" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width:600px; margin: 0 auto; text-alig=
+n: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+<!--CTA button-->=20
+<tr>=20
+<td valign=3D"top">=20
+<div class=3D"mktoText" id=3D"banner-button1">=20
+<table style=3D"margin:0 auto;" width=3D"auto" align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>=20
+<tr>=20
+<td style=3D"background-color: #F15F43; border:1px solid #F15F43;border-radi=
+us:3px;font-family:Arial,Helvetica,sans-serif; font-size: 16px; mso-line-hei=
+ght-rule: exactly; line-height:22px ; text-align: center; vertical-align: mi=
+ddle; color: #FFFFFF; display: block; padding:9px 40px 8px;" valign=3D"middl=
+e"> <a style=3D"text-decoration: none; color: #FFFFFF !important;outline: no=
+ne;" href=3D
+"https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-Wd2iDfs_Byjf79eTJmo2LEz=
+KdAjEQcCAr6GINfzN9nc3EGobFDPzfBwQTWWdfjgA_kEY=3D"
+> <span style=3D"color:#FFFFFF;">What is ROM</span> </a> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeTextbc772858-149e-4e69-ae25-cd647a9ef7=
+59" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collaps=
+e: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:14px; color:#000000; font-family:Arial,Helvetica,sans=
+-serif; mso-line-height-rule: exactly; line-height:20px;text-align:left;" va=
+lign=3D"top">=20
+<div id=3D"FreeTextContentbc772858-149e-4e69-ae25-cd647a9ef759" class=3D"mkt=
+oText">=20
+<p>The Blue Prism Team<br /></p>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 1px; font-size: 1px;" height=3D"20">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--Outer table End-->=20
+<!--Footer Begin-->=20
+<table class=3D"main" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing:=
+ 0; border-collapse: collapse;margin:0 auto;" align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"640">=20
+<tbody>
+<tr>=20
+<td bgcolor=3D"#0F4B8F" style=3D"border-collapse:collapse" ;=3D"" background=
+-color:#0F4B8F;"=3D"">=20
+<table class=3D"inner_table" style=3D"margin:0 auto;width:600px;" align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<!--Extra Space-->=20
+<tbody>
+<tr>=20
+<td height=3D"10" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+<tr>=20
+</tr>
+<tr>=20
+<td valign=3D"center" height=3D"66px" style=3D"font-size:12px; color:#FFFFFF=
+; font-family:Arial,Helvetica,sans-serif; mso-line-height-rule: exactly; lin=
+e-height:66px;text-align:left;">=20
+<div class=3D"mktoImg" id=3D"logofooter" mktolockimgsize=3D"true">
+<a href=3D
+"https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-WdwLuwE15nCq2bLLLNJ3IF8=
+BdFC1_mZbC8joUXrFPDKckPiN1nAspPdNCPSugPqas_SQ=3D" target=3D"_blank"
+><img src=3D"https://pages.blueprism.info/rs/544-MLV-234/images/logo_bp_prim=
+s_white.png" width=3D"150" alt=3D"Logo" style=3D"display:block;  font-family=
+:Arial, sans-serif; font-weight:bold; text-align:center; max-width:200px;" /=
+></a>
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"10" style=3D"line-height:1px;font-size:1px;">&nbsp; </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--Footer End-->=20
+<!--Copyright and Unsubscribe-->=20
+<table class=3D"inner_table" style=3D"width: 600px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"600">=20
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"font-family:'Source Sans Pro', =
+Arial, sans-serif; font-size:10px; color:#000000; line-height:16px; padding:=
+10px;">=20
+<div class=3D"mktoText" id=3D"unsubscribe">
+<p><span style=3D"text-decoration: underline;"><a style=3D"text-decoration: =
+underline; color: #0f7dc2;" href=3D
+"https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-Wd_ziwWIdu3sn2QPnZOsRqd=
+bz2Pn9tonu0eMzv1W-fNlr_h0c2CP4l6QqHorWZi4C48g=3D"
+>Contact</a></span>&nbsp; <span style=3D"text-decoration: underline;"><span =
+style=3D"color: #0f7dc2;"><a style=3D"text-decoration: underline; color: #0f=
+7dc2;" href=3D
+"https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-Wd2Ig7n8OIAZ8pUiojdWgLw=
+4Z7sErkGbbLq0a_uxHjT7VALZwJoJgFiR_if-JRW1G5Pw=3D"
+>Privacy Policy</a></span></span> | To&nbsp;manage your email preferences&nb=
+sp;<span style=3D"text-decoration: underline;"><span style=3D"color: #0f7dc2=
+;"><a href=3D
+"https://email.blueprism.info/NTQ0LU1MVi0yMzQAAAGFdg-WdzLb6Hq-DnvtFNJHMUNfne=
+YKjiQTPgaxVcNQRVzUF4Q0cWGMHWBQ4V3POq22MMFIe6A=3D" target=3D"_blank" style=3D=
+"text-decoration: underline; color: #0f7dc2;"
+>click here</a></span></span><br /> =C2=A9 2019 Blue Prism Limited. =E2=80=9C=
+Blue Prism=E2=80=9D, the =E2=80=9CBlue Prism=E2=80=9D logo and Prism device =
+are either trademarks or registered trademarks of Blue Prism Limited. All Ri=
+ghts Reserved.</p>
+</div> </td>
+</tr>=20
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"font-family:'Source Sans Pro', =
+Arial, sans-serif; font-size:10px; color:#000000; line-height:16px; padding:=
+10px;">=20
+<div class=3D"mktoText" id=3D"locations">
+<p><strong>BLUE PRISM LOCATIONS</strong> <br /> United States: Plaza 7000, 7=
+000 North Mopac Expressway, Suite 200, Office 2142, Austin, TX 78731 USA <br=
+ /> Australia: Level 20, Tower 2 Darling Park, 201 Sussex Street, Sydney, Ne=
+w South Wales, NSW 2000 <br /> France: 40 rue du Colis=C3=A9e, Paris 75008 <=
+br /> Germany: Theatinerstrasse 11, 80333 M=C3=BCnchen <br /> India: #1425 L=
+evel 14, Concorde Tower, UB City, 1 Vittal Mallya Road, Bangalore 560001 <br=
+ /> Japan: 14F Kamiyacho MT Building, 4-3-20, Toranomon, Minato-ku, Tokyo 10=
+5-0001 <br />Singapore: MBFC Tower 3 Level, 17-01 12 Marina Boulevard, Singa=
+pore, 018982<br />United Kingdom: Prism One, 2 Cinnamon Park, Crab Lane, War=
+rington, WA2 0XP, England</p>
+</div> </td>
+</tr>=20
+</tbody>
+</table> =20
+
+<img src=3D"https://email.blueprism.info/trk?t=3D1&mid=3DNTQ0LU1MVi0yMzQ6MDo=
+0MjgyOjE4ODYyOjA6MzYyMzo5OjQxNjMxOjU0MjI0MzAtMTpudWxs" width=3D"1" height=3D=
+"1" style=3D"display:none !important;" alt=3D"" />
+
+<!--This is a comment -->
+</body>
+</html>
+--=-ca04E8vbev8hiTmkF5fYnw==--

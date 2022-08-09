@@ -1,0 +1,223 @@
+Delivered-To: divyaeidiko9@gmail.com
+Received: from sonic.gate.mail.ne1.yahoo.com
+	by sonic320.consmr.mail.bf2.yahoo.com with HTTP;
+	Thu, 4 Aug 2022 09:44:41 +0000
+X-Google-Smtp-Source: AA6agR7rr5fELCTFlAITwX83FPhp3n2J8DiRWwyVbBtZ2NLtzRQzyr6+/mQD/99zC7XYctlJUadE
+X-Received: by 2002:a05:6214:c43:b0:476:eb8c:bae8 with SMTP id
+ r3-20020a0562140c4300b00476eb8cbae8mr652041qvj.125.1659606281934;        Thu,
+ 04 Aug 2022 02:44:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1659606281; cv=none; d=google.com;
+	s=arc-20160816;
+	b=EmzFQjQcNX7qo5Db9EAn72yloxzJSeyDw5x/KXe329xTAmVOJD3RYgfFBwu648C+kNHt0fiGcSk
+	o2c0fktYGZ7PG3Wj0Eyqlyu64QA7R5pDaK8fNV0DXsx78nqh/eDBiqls+qmgjEjWNBeJIIVrTHT7U
+	If3h1X2rXgxuRIHtCnrCSpSWXaY+t3baBiuINXuMSuQEQeN5BjnPG2WPqqSf+DnLUTPO4uuiRi4W8
+	Ze3xJ9APjverRcbgnKYQlSOrTxL1rMKSCPc6Gu/34wW/ICRXwvyu+fCgwW3I2jk1xFbejIlZR/Eaq
+	yJZ3PVpZGPJWVMJZbHMn94e/slhy4fAQ0Mow==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=mime-version:subject:references:in-reply-to:message-id:to:reply-to:from:
+	date:dkim-signature;
+	bh=QJwys2/dYDSqSpYg58DC7M3te0y5naHgXcf29bzpDNk=;
+	b=v6FyCOpLv9AfO/CljnwpyUywrqoPWcGziMB/sufHIqto3UGqBzvNQFFKbpf1dTmp2iwYY+0mnis
+	v1eSMcoRMhtOn+aG+dx6BZhne38hg6fLTAdZrbjDmaqoXYUrrPMg+Nf04H7kplLxSbiH21iCTQ/3C
+	k6ZRCestdqVmlApAD2BGQJak6CxWl5eWHMaXSb62IrcxZNfva2K0blDJlhRxTxyw9D4Zj/k6gqSnb
+	/BwIkbvkcY4fye+8BENxz1zewsl6oIjrcuUbYI185A9wSe7XjYqdnFJyIBn/d8C82k6fK5O6h46i/
+	5ro4irDr0DupvCrfx/93ZA0ZulLgM5zgonUQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@yahoo.com header.s=s2048 header.b=qH0ukvsW; spf=pass
+	(google.com: domain of madhavi2020@yahoo.com designates 74.6.128.206 as permitted sender)
+	smtp.mailfrom=madhavi2020@yahoo.com;
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <madhavi2020@yahoo.com>
+Received-SPF: pass (google.com: domain of madhavi2020@yahoo.com designates
+ 74.6.128.206 as permitted sender) client-ip=74.6.128.206;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@yahoo.com header.s=s2048 header.b=qH0ukvsW; spf=pass
+	(google.com: domain of madhavi2020@yahoo.com designates 74.6.128.206 as permitted sender)
+	smtp.mailfrom=madhavi2020@yahoo.com;
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+	t=1659606281;
+	bh=QJwys2/dYDSqSpYg58DC7M3te0y5naHgXcf29bzpDNk=;
+	h=Date:From:Reply-To:To:In-Reply-To:References:Subject:From:Subject:Reply-To;
+	b=qH0ukvsWJw80Gna7fYD8OSmeN1gefSDprO9bwBEC2RiCZ+8TKWVokWOGQoMOWWOfY+ZGuY4TYUG
+	1DZTvUhVbW5FGBstHKWSq57IrpHiNw2B3zNVmEmMTrcB435SK2m+12e5bBMmNeKvmfy0Z08emNF3e
+	qkDHWGxiB0bYIqqT6EpfGyLlznH04NOMnzCWgh/jakX54ZRM7hAEW0TrEzoP5IdLy9OJ9xpaPBHPh
+	J9W9SMYCPj4Edi673jOOHzaClcBjMqZW7ZleHT/EIYAPs0ho1F5t4t3UYHYNq232nfmSDjOK3sTDm
+	vL457YMXgQ9N5/tFDUZI+leGYBKgXb6r+13w==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1659606281; bh=quqRkvlRdmqxM30tmvLymi+z0ZnokjmYsqsSksR5uYQ=;
+ h=X-Sonic-MF:Date:From:To:Subject:From:Subject;
+ =?utf-8?q?b=3DQ0rFQHQFWujfS9ePkik8RQp4Y17bf0q9eowIy0lB1CdZ3H=2FnvB0d3Y5KKpi?=
+ =?utf-8?q?SvM0+M9aAUIM2Luj0huZsBD05PWo4duMsJhphA=2F7QE8+8wajtCjz1=2Fwn6yNPz?=
+ =?utf-8?q?arYj4q4gyzOlPRlHUaocUmkFcWGmA1oth6fMPkaFYr+zMkh7cegLfQaJdj2AN?=
+ =?utf-8?q?frqwN4TvV4rwraNy1KE7N1q9TCQnRVB9=2F6lQwkMt6M1DG2IsvyGsrynLp78Mq?=
+ =?utf-8?q?LDM=2FWMb1fxIr1zvuUsWqbE=2FUKo7a7bIbvJs4EZYG3R3EL1te5phjzIU7fE5H5?=
+ =?utf-8?q?1Yi69t7nDhepmFcFaQqUuHqxKJzVnyxmn26HI4A=3D=3D?=
+X-YMail-OSG: 4yIb_pgVM1kMJdX6yD.3Fb79M8GEBx9ncXewc0Btnm9ViuoijXNG39NxdTKcj35
+ hVCmwQvrYA.UPvVQEohzSKcLrUql.h_Ry5PdqCIbJLhllnSX2ZWpDcKYuIcVYReeTmKZ2U_rXosD
+ nBoxWfH4ZwjWPCo4c9EJjNsJNz3eBj3mQe7KhOYvjcVx3tyf8Qadesv8yI1zgBZsbROmr3sxo5rb
+ Zf4feV8epOHcI_hMO824IqqvSdcVq_ZCQ60RBvKtL5O9xob1h8V18fGhPIyY985MelBjHWL4U2Lk
+ iyHk01MBueGJQ7fYFryzmQBnkaaPREkgwGBBy9DxPKAsAU_BIY8uibvBsA2UfhQ0KqopBYCMq6E8
+ HTaECc.6ZnNkgmZ7EulyxnalInU75qgBCvmacHlGf.n2wn63mFUY7sKNjMN19VdjAeV9D.uejsCn
+ cwseTANl794u7.LJRgf1QYb5zPk6WJX1NZ56RnCAL5tfAoP5XSwR36XwkSFuhfG5xUJf0S3LzcTH
+ YRRe3ED.Jtrq2LKUf.Wcp.oePKzP95Sg05Wj4iOh0pfVK.3Bk5BlfLeWbsx1EMXBpTvix6edm66z
+ VHdGkogQkZfIkMcIlMtGF.LBV0zNRDplmbntUPDlrNzXfU5kXXpeYOHEjjcDqqJ.xiMArAoCEi_7
+ TwE7ZLvV.Dg2hvkpr1A9WqT5EHetjwP7q4quJPOmw6pYHcZEDPFBgRnCRP14aEcLcUocIGBXg.uK
+ WLE1rgtmpMCV0fLi1WoSpSiUXJvvUOQouZteaCeJQmN6d0YVqNcLvFSwylhK9J4HGQZhFeCG.dYs
+ X.xs_LFKKNncW7iiuG86UMIH3s5CEFBWk8NS_iLHq.a6Cd9nBjFoD9Ch2Db4PCH9ORu1NfV5ONy7
+ R0Mx3ef_LeMRNYFlkYCUNoD_4JsFYdXmxYZRGoEXw2kIp05e.1QZkFj3UjnrXgJBzO6BQ3AMSg4y
+ tzSbdJFMtX0ap6ZST6HD4qE5FHiwe.vESX7JDPrTzz77S1keSlpyXt4OLaKDwN0woF6E1P8VHcvS
+ C5SK49ZHbYgLbIErL0x.PIB9BwFydKbZtQs107Q192slgv1VPp57BPnaE8W2We5sGzew4hlVHGlu
+ lCeENggbHwDYLAk..9Xtv8CMQb6rvgNTDlyjQCohTC3xNO6QYXNzR8x5MPWAiyMb.v.m5fOFXbDF
+ Uil1JGBtExeL8DqNbzHr_xoOq4LXuFtrfrD97D8xbdzXkhngvcrhe1_qzAIgGL52f26QFJl6zQ92
+ y7jxwMxkCza0D1hVfQMQQkZBcti6PxW37m2ZNqi72lNHN.DLXrS4A_NYUyNfSqdvZBDLK_d6mdNp
+ AadcoIrq1q4h1_SdHo9jafRZ_KlMErK8nikNoDTmJB2E0c_haIjIq_u2LV0276sNgAkPWIPMM_aM
+ XIA4lSV2rYTiNLQUBfbM6paK2nOE_9kpnOvYcojavoFkW89eUVIzIqurgJIs89bUmeahgc1FxulN
+ ZI9XAuipTNF8w1JbFVUD37zC.v.xULVVfjqDmjgW8uWwClxWkb0T4IOudkYge6YTlIUBzHMMWeka
+ jMzZrSMPHff7xztkakUm1iqipWWCfEDJiHv_3Rl2g8CxGjL9iLOUfrAPWxyEB4TFgKnim35BWwFg
+ gj_K3mFe8.XIKdaXz57G9tFqPmcIWumTWUh0jPAounS2vksSlYCJITTWzWI5p5MCHtWZ0h_Fgp6v
+ lD01RCcYdZ3ufYiW75J0P23.zb04cR9.A8KEZFXJ46eHko7uuvbGEzBBm2GJIJ0PBsaAZYnQv2fT
+ c9e7zUMJJAeIvQybdTqWhRATXojLKy94YyF4aK5AYMV4OfHi38SvmVYc.YqbbHeL.3JD795aEZbC
+ lqa_s49bkht.XtvsdjM3y71ahWxgTRabxBBLuIHn8h371NodIZ2xCPyY8VdmcK7eNSh_SoFmajOn
+ UbHsWE4PX8wIT.Cjqk.bUhhhaQnG1p1NByM9UfQOKHrOZo9mCOqQs1fS3E2bxteRjqNERkzOIprj
+ DxnWGsnxXeLC.h9eHDEvQ6o_alssyl5zDyrkYcFdffup25cVeImW60P3qyBBchhU6ANetmaMnK.c
+ TVYg9Q8g8HI3Pp4wv8rcGjWJB12r57tvkut5WpWR2_vX9JzDJ.OEW45oZsGQ6VChgji9IAaM8hZV
+ ne0.QNoCRKZiGBFEmBFOAIMuiaaUbbCevLUo9.88_VPDwl10r7N5_cMnaDRHqDnuF8JCLTHVP.WM
+ HgwqLXYGnLpMC0VYK_p101sjLyXz..4tj6DvmUmVtVqbLr0rClDEssDOo2plOdgqzHamycxUZ2oB
+ 01R6xP8UkkbrgpbGMttTSrdvC2xvyIoEn7D_NKbq5FD4p4aM89yt.QF49_hp8XBEK_b5HGBaAuCB
+ uOS9CcNi3O7xhXeMMymnlevKTqX0ouPV2b0rXjk2uc6DGJf17RBs-
+X-Sonic-MF: <madhavi2020@yahoo.com>
+Date: Thu, 04 Aug 2022 09:44:36 +0000
+From: Madhavi Kadiyala <madhavi2020@yahoo.com>
+Reply-To: Madhavi Kadiyala <madhavi2020@yahoo.com>
+To: Divya Raavi <divyaeidiko9@gmail.com>
+Message-ID: <1503334238.376247.1659606276777@mail.yahoo.com>
+In-Reply-To: 62eb751c.170a0220.e0949.014a@mx.google.com
+References: <62eb751c.170a0220.e0949.014a@mx.google.com>
+Subject: Re: Congratulations!! you are selected
+MIME-Version: 1.0
+X-Mailer: WebService/1.1.20491 YMailNorrin
+Uid: 54
+Folder: INBOX
+Sender: Madhavi Kadiyala <madhavi2020@yahoo.com>
+PlainText: For What ?Thank You,Madhavi
+ =?utf-8?b?S2FkaXlhbGEo4LCu4LC+4LCn4LC14LC/IOCwleCwoeCwv+Cwr+CwvuCwsik=?=    
+ On Thursday, August 4, 2022, 12:28:32 AM PDT, Divya Raavi
+ <divyaeidiko9@gmail.com> wrote:    DearMadhaviWe are verry happy to inform
+ you. your DOJ is05/09/2022 00:00:00
+HtmlBody: <html><head></head><body><div class="ydp930da041yahoo-style-wrap"
+ style="font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size:
+ 13px;"><div style=""><div dir="ltr" data-setdir="false" style=""><font
+ size="5" color="#cd232c">For What ?</font></div><div dir="ltr"
+ data-setdir="false" style="font-size: 13px;"><br></div><div dir="ltr"
+ data-setdir="false" style="font-size: 13px;"><br></div><div style="font-size:
+ 13px;"><br></div><div class="ydp930da041signature" style="font-size:
+ 13px;"><div style="font-family:Helvetica, Arial,
+ sans-serif;font-size:13px;"><font size="2"><span><span
+ style="COLOR:black;"><font style="font-family: times new roman, new york,
+ times, serif; background-color: inherit;">Thank You,<br>Madhavi
+ Kadiyala<br></font></span></span></font><div><font size="2"><span><span
+ style="COLOR:black;"><font style="font-family: times new roman, new york,
+ times, serif; background-color: inherit;"><span
+ style="COLOR:rgb(102,0,0);"></span></font><font style="font-weight: bold;
+ background-color: inherit;"><span
+ =?utf-8?b?c3R5bGU9IkNPTE9SOnJnYigwLDEyNyw2NCk7Ij4o4LCu4LC+4LCn4LC14LC/?=
+ =?utf-8?b?IOCwleCwoeCwv+Cwr+CwvuCwsjwvc3Bhbj48L2ZvbnQ+PGZvbnQ=?=
+ style="font-weight: bold; background-color: inherit;"><span
+ style="FONT-STYLE:italic;FONT-FAMILY:times new roman, new york, times,
+ serif;"></span></font><font style="font-weight: bold; background-color:
+ inherit;"><a style="COLOR:rgb(192,0,0);"
+ =?utf-8?q?href=3D=22https=3A=2F=2Fwww=2Eprepaidlegal=2Ecom=2FMultisite=2FMultisite=3Fsite=3Dh?=
+ =?utf-8?q?ub&amp=3Bassoc=3Dmadhavikadiyala=22?= rel="nofollow"
+ target="_blank"><span style="FONT-STYLE:italic;"></span></a></font><span
+ style="BACKGROUND-COLOR:rgb(255,255,255);COLOR:rgb(0,0,255);"></span><font
+ style="font-weight: bold; background-color: inherit;"><span
+ =?utf-8?q?style=3D=22COLOR=3Argb=280=2C127=2C64=29=3B=22=3E=29=3C=2Fspan=3E=3C=2Ffont=3E=3C=2Fspan=3E=3C=2Fspan=3E=3C=2Ff?=
+ =?utf-8?q?ont=3E=3C=2Fdiv=3E=3Cdiv=3E=3Cspan=3E=3Cspan?=
+ style="COLOR:black;"><font style="font-weight: bold; background-color:
+ inherit;" size="2"><span
+ =?utf-8?q?style=3D=22COLOR=3Argb=280=2C127=2C64=29=3B=22=3E=3C=2Fspan=3E=3C=2Ffont=3E=3C=2Fspan=3E=3C=2Fspan=3E=3C=2Fdi?=
+ =?utf-8?q?v=3E=3C=2Fdiv=3E=3C=2Fdiv=3E=3C=2Fdiv=3E?=        <div
+ style="font-size: 13px;"><br></div><div style="font-size: 13px;"><br></div>               
+ </div><div id="ydpa3a1955yahoo_quoted_9808011933"
+ class="ydpa3a1955yahoo_quoted">            <div style="font-family:'Helvetica
+ Neue', Helvetica, Arial, sans-serif;font-size:13px;color:#26282a;">                               
+ <div>                    On Thursday, August 4, 2022, 12:28:32 AM PDT, Divya
+ Raavi &lt;divyaeidiko9@gmail.com&gt; wrote:                </div>               
+ <div><br></div>                <div><br></div>                <div><div
+ dir="ltr">DearMadhaviWe are verry happy to inform you. your DOJ is05/09/2022
+ 00:00:00<br></div></div>            </div>        </div></body></html>
+Content-Type: multipart/alternative; boundary="=-TGUDwgtjZd4hZen9p5b9nw=="
+
+--=-TGUDwgtjZd4hZen9p5b9nw==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <e34efeeb-e216-40ef-8bc5-533f33cbcbe6>
+
+For What ?
+
+
+Thank You,
+Madhavi Kadiyala
+(=E0=B0=AE=E0=B0=BE=E0=B0=A7=E0=B0=B5=E0=B0=BF =E0=B0=95=E0=B0=A1=E0=B0=BF=E0=
+=B0=AF=E0=B0=BE=E0=B0=B2)=20
+
+    On Thursday, August 4, 2022, 12:28:32 AM PDT, Divya Raavi <divyaeidiko9@=
+gmail.com> wrote: =20
+=20
+ DearMadhaviWe are verry happy to inform you. your DOJ is05/09/2022 00:00:00
+ =20=
+
+--=-TGUDwgtjZd4hZen9p5b9nw==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <76f451d6-6645-4daf-8c4e-518d3af9b5af>
+
+<html><head></head><body><div class=3D"ydp930da041yahoo-style-wrap" style=3D=
+"font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 13px;=
+"><div style=3D""><div dir=3D"ltr" data-setdir=3D"false" style=3D""><font si=
+ze=3D"5" color=3D"#cd232c">For What ?</font></div><div dir=3D"ltr" data-setd=
+ir=3D"false" style=3D"font-size: 13px;"><br></div><div dir=3D"ltr" data-setd=
+ir=3D"false" style=3D"font-size: 13px;"><br></div><div style=3D"font-size: 1=
+3px;"><br></div><div class=3D"ydp930da041signature" style=3D"font-size: 13px=
+;"><div style=3D"font-family:Helvetica, Arial, sans-serif;font-size:13px;"><=
+font size=3D"2"><span><span style=3D"COLOR:black;"><font style=3D"font-famil=
+y: times new roman, new york, times, serif; background-color: inherit;">Than=
+k You,<br>Madhavi Kadiyala<br></font></span></span></font><div><font size=3D=
+"2"><span><span style=3D"COLOR:black;"><font style=3D"font-family: times new=
+ roman, new york, times, serif; background-color: inherit;"><span style=3D"C=
+OLOR:rgb(102,0,0);"></span></font><font style=3D"font-weight: bold; backgrou=
+nd-color: inherit;"><span style=3D"COLOR:rgb(0,127,64);">(=E0=B0=AE=E0=B0=BE=
+=E0=B0=A7=E0=B0=B5=E0=B0=BF =E0=B0=95=E0=B0=A1=E0=B0=BF=E0=B0=AF=E0=B0=BE=E0=
+=B0=B2</span></font><font style=3D"font-weight: bold; background-color: inhe=
+rit;"><span style=3D"FONT-STYLE:italic;FONT-FAMILY:times new roman, new york=
+, times, serif;"></span></font><font style=3D"font-weight: bold; background-=
+color: inherit;"><a style=3D"COLOR:rgb(192,0,0);" href=3D"https://www.prepai=
+dlegal.com/Multisite/Multisite?site=3Dhub&amp;assoc=3Dmadhavikadiyala" rel=3D=
+"nofollow" target=3D"_blank"><span style=3D"FONT-STYLE:italic;"></span></a><=
+/font><span style=3D"BACKGROUND-COLOR:rgb(255,255,255);COLOR:rgb(0,0,255);">=
+</span><font style=3D"font-weight: bold; background-color: inherit;"><span s=
+tyle=3D"COLOR:rgb(0,127,64);">)</span></font></span></span></font></div><div=
+><span><span style=3D"COLOR:black;"><font style=3D"font-weight: bold; backgr=
+ound-color: inherit;" size=3D"2"><span style=3D"COLOR:rgb(0,127,64);"></span=
+></font></span></span></div></div></div></div>
+        <div style=3D"font-size: 13px;"><br></div><div style=3D"font-size: 1=
+3px;"><br></div>
+       =20
+        </div><div id=3D"ydpa3a1955yahoo_quoted_9808011933" class=3D"ydpa3a1=
+955yahoo_quoted">
+            <div style=3D"font-family:'Helvetica Neue', Helvetica, Arial, sa=
+ns-serif;font-size:13px;color:#26282a;">
+               =20
+                <div>
+                    On Thursday, August 4, 2022, 12:28:32 AM PDT, Divya Raav=
+i &lt;divyaeidiko9@gmail.com&gt; wrote:
+                </div>
+                <div><br></div>
+                <div><br></div>
+                <div><div dir=3D"ltr">DearMadhaviWe are verry happy to infor=
+m you. your DOJ is05/09/2022 00:00:00<br></div></div>
+            </div>
+        </div></body></html>
+--=-TGUDwgtjZd4hZen9p5b9nw==--

@@ -1,0 +1,1442 @@
+Delivered-To: divyaeidiko9@gmail.com
+Received: from bounce.uipath.com (bounce.uipath.com. [185.28.196.158])
+	by mx.google.com with ESMTPS
+	id g7-20020adfd1e7000000b0022079d316d4si3045620wrd
+	.773.2022.08.03.21.43.39        for
+	<divyaeidiko9@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+	Wed, 03 Aug 2022 21:43:40 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR7zMcyqCVAqmgpU4oF8mBhDR7+ApdiYb46i6OXrmSdw/3nqBLj22zepKMRpTwUmEI0YxicS
+X-Received: by 2002:a05:600c:4e08:b0:3a3:55d9:fd52 with SMTP id
+ b8-20020a05600c4e0800b003a355d9fd52mr2280wmq.148.1659588220218;        Wed,
+ 03 Aug 2022 21:43:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1659588220; cv=none; d=google.com;
+	s=arc-20160816;
+	b=UN5ferjwiEQ8B1I+8Qwrd8EF4CE0oOExl/jj85DqY3HPgqdZfh5ijjyazc3htqAh5M/jbsHRI3w
+	PsYTeHVsmKI5ZYrJYAYBX/sbJcnhF/8hev69G637288DQcnl5eYoCxvnzYZp0zybljv5Om+LQRAR+
+	MQfxHyqv9UPrHnlPqPcGoZET/YTY7BVeWo+0EvPwWqZ3TRJeM6mqaHBYBQpENDr/Wl3/76Lxapu98
+	fE0txNg0g6WeUyN7cAQrLlX765jxZxyIOONMBMvpBAaCnMXqlLX7RX3EsJmcA6KgolaBQeTd41hVQ
+	2qHWZF9t9IW1MtHZe7QfW4COn0GM1T69fpbA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from:date:
+	dkim-signature:dkim-signature;
+	bh=zAiCUFVj8JG10/vl2peRHb7ICH5Nmd6guTe6/0cCe50=;
+	b=vBc0wqY4fsTt86zRduSLrL1mz0kFQ3WuObgse/uorIoyzxV55nZ/K6GOHMK50GSP8AFUJPBnidK
+	o3CzX1umuDnrgvy5v/pgBUZML3Cw5zLIk9t7XWMJx3NJZi+tTvr/SMMIpwoGgQK1ex2Jrkehz4t35
+	eSLdRz+E+dYwFsP6W9ca4bOUclJuXn71hSaqg1AA7Imim9LVejr+aT4OogiZLU33j+B/xVIamZZcO
+	WMk2xBrRTL2gxsgxM8B04QwQG7lwpRqPV8uxGy4XMXQP1WYQ6WEfMfnYXyWTOgoHFLyTitwPg+DqU
+	O3PUpYThnOL7bBxwZHYtfYoR20p97JXy4vFQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@mail.uipath.com header.s=m1 header.b=RECRBps4;
+	dkim=pass header.i=@mktdns.com header.s=m1 header.b=Lj7kjadi; spf=pass
+	(google.com: domain of 995-xlt-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com designates 185.28.196.158 as permitted sender)
+	smtp.mailfrom=995-XLT-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com;
+	dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=mail.uipath.com
+Return-Path: <995-XLT-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com>
+Received-SPF: pass (google.com: domain of
+ 995-xlt-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com designates
+ 185.28.196.158 as permitted sender) client-ip=185.28.196.158;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@mail.uipath.com header.s=m1 header.b=RECRBps4;
+	dkim=pass header.i=@mktdns.com header.s=m1 header.b=Lj7kjadi; spf=pass
+	(google.com: domain of 995-xlt-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com designates 185.28.196.158 as permitted sender)
+	smtp.mailfrom=995-XLT-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com;
+	dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=mail.uipath.com
+X-MSFBL: 6Km9JV6c+YXnuiNKpxEzl5ffndb2zZYnBDb13W4SP6w=|eyJnIjoiYmctbG9uZC0
+	xMzMiLCJ1IjoiOTk1LVhMVC04ODY6MDozMTE4NzoxNDA0MTg6NjQ2NjA0OjQxNTk
+	2Ojk6MTAyMjU2OjE3NDk1MTAxIiwiciI6ImRpdnlhZWlkaWtvOUBnbWFpbC5jb20
+	iLCJiIjoiZHZwLTE4NS0yOC0xOTYtMTU4In0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1659587537;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=zAiCUFVj8JG10/vl2peRHb7ICH5Nmd6guTe6/0cCe50=;
+	b=Lj7kjadiacbSIb8FXOye3u0QCyTuJrdhXIh3DDsHOiAf85nX7Ka3AY7yO1NnQBTly7JInS7Bdt8
+	dDdwxtn8ZBxbSdqWN8rhGmOdr/Y0ctKfpiMlJCy5A+VLJOWy6UpzxXJIGe6K2MOEq/520889+NjHw
+	3LItCnUThuqH+GD6z0M=
+Date: Wed, 03 Aug 2022 23:32:17 -0500
+From: UiPath <info@mail.uipath.com>
+Reply-To: info@mail.uipath.com
+To: divyaeidiko9@gmail.com
+Message-ID: <487644340.205331510.1659587537410@lonmktmail-batch1d.marketo.org>
+Subject: [NEW] Discover the top 3 use cases for task mining
+MIME-Version: 1.0
+X-Binding: bg-lond-133
+List-Unsubscribe: =?utf-8?q?=3Cmailto=3AGNAXQY2LJJQXON3YKBFFO2DSJBYVQ3LNI5ZFCTRNHB5DSVJYL5IW6?=
+ =?utf-8?q?3CGMJXVU6KYFVDVCPI=3D=2E102256=2E41596=2E9=40unsub-lon=2Emktomail=2Ecom=3E?=
+X-MarketoID: 995-XLT-886:0:31187:140418:646604:41596:9:102256:17495101
+X-PVIQ: mkto-995XLT886-000001-000000-102256
+X-Mailfrom: 995-XLT-886.0.102256.0.0.41596.9.17495101@bounce.uipath.com
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+Uid: 53
+Folder: INBOX
+Sender: UiPath <info@mail.uipath.com>
+PlainText: New report:2022 =?utf-8?b?R2FydG5lcsKu?= Market Guide for
+ Task-Mining ToolsHi divya,Large enterprises often struggle to gather insights
+ on how the tasks are being executed, identify process bottlenecks or
+ employees' knowledge and efficiency gaps. Task mining is a technology paired
+ with artificial intelligence (AI) that captures the work of your most
+ efficient team members to help you optimize processes and maximize ROI from
+ automation.The Gartner Market Guide for Task-Mining Tools
+ =?utf-8?q?=3Chttps=3A=2F=2Fwww=2Euipath=2Ecom=2Fresources=2Fautomation-analyst-reports=2F?=
+ =?utf-8?q?gartner-market-guide-for-task-mining-tools=3Futm=5Fsource=3Dmarketo?=
+ =?utf-8?q?&utm=5Fmedium=3Demail&utm=5Fcampaign=3DAR22TMG&utm=5Fcontent=3Dinitial=3E?=
+ describes the state of the task mining market, highlighting its capabilities
+ for identifying automation opportunities, improving the employee experience,
+ and increasing =?utf-8?b?d29ya2Vyc+KAmQ==?= productivity.Get your
+ complimentary copy of the Gartner report to learn about the top three use
+ cases for task mining and see how enterprise technology can make your company
+ happier, more efficient, and more profitable today.${CTAPrimary-Text}
+ <${CTAPrimary-Link}>Gartner, Market Guide for Task-Mining Tools, Anirudh
+ Ganeshan, Marc Kerremans, 28th April 2022Gartner does not endorse any vendor,
+ product or service depicted in its research publications, and does not advise
+ technology users to select only those vendors with the highest ratings or
+ other designation. Gartner research publications consist of the opinions of
+ Gartner research organization and should not be construed as statements of
+ fact. Gartner disclaims all warranties, expressed or implied, with respect to
+ this research, including any warranties of merchantability or fitness for a
+ particular purpose.GARTNER is a registered trademark and service mark of
+ Gartner, Inc. and/or its affiliates in the U.S. and internationally and is
+ used herein with permission. All rights reserved.Visit UiPath
+ =?utf-8?q?=3Chttps=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8Z=5FMhF5tJXlD?=
+ =?utf-8?q?rDizpDDaDoQswkZggeaww81l5vwiOLAoGeOzB=5FrLfxekfAxsql6MLE4=3D=3EUiPa?=
+ =?utf-8?q?th?= Inc. | 90 Park Ave, New York, NY 10016 United StatesTo choose
+ the types of emails you receive, or to opt yourself out completely, let us
+ know
+ =?utf-8?q?=3C=5B=5Bhttps=3A=2F=2Fstart=2Euipath=2Ecom=2FUnsubscribePage=2Ehtml=3Fmkt=5Funsubscr?=
+ =?utf-8?q?ibe=3D1&mkt=5Ftok=3DOTk1LVhMVC04ODYAAAGGBhjZ8f2m2lkk693mO9i1T2GsSFT?=
+ =?utf-8?q?ZP2wGRz9Mz71DK4D=5F5ulrMdOlC4QVci=5F4Zdf-KjxYVgSkDtNDGhaSj1ZKI39Q?=
+ =?utf-8?q?bJ5PAxq7jhicaZq0tjsmPvY=5D=5D=3E=2E?=
+ =?utf-8?q?_=3Chttps=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8YhoVlYMG1oi?=
+ =?utf-8?q?OwejxKxtPQk6WYfMn=5FMCD1ojKB0ydMtioEDej2jD7YSZGKSgUf-k9kk=3D=3E?=
+ =?utf-8?q?____=3Chttps=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8FLZ2=5FLUed5r?=
+ =?utf-8?q?qp3B2MMZoUR3097x-m5NApeoDxHJ9ZwI-gp2=5Fv66ygADtA4pHegUcr0=3D=3E?=
+ =?utf-8?q?____=3Chttps=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8K=5F0RBYbf8ok?=
+ =?utf-8?q?zF8xJvCmFtHYpqSHuacttCocSDePbEHuleBQEqEcYZzEXGAtq6pw1oU=3D=3E?=
+ =?utf-8?q?____=3Chttps=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8WNI7wbiHzr8?=
+ =?utf-8?q?YGV006smPa2-tBV4dL0ryILNuE55tOIf12179PUxpDUhab5aDrPZxQg=3D=3E?= 
+ Read privacy policy
+ =?utf-8?q?=3Chttps=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8OB9nY9GbujJ?=
+ =?utf-8?q?44hMpML3gCCFSsPgweF4bv0Sf3m1aRJM7XRIH30yGVQ8uwRpTMKsXaU=3D=3E=2E?=
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"><head> <!--[if gte mso 9]>     
+ <xml>        <o:OfficeDocumentSettings>          <o:AllowPNG />         
+ <o:PixelsPerInch>96</o:PixelsPerInch>        </o:OfficeDocumentSettings>     
+ </xml>    <![endif]--> <!--Global Variables Begin-->           <!--Global
+ Variables End--> <!--FullWidthImage Module Variables Begin--> 
+ <!--FullWidthImage Module Variables End--> <!--InlineImage Module Variables
+ Begin-->  <!--InlineImage Module Variables End--> <!--InlineImageMeta Module
+ Variables Begin-->    <!--InlineImageMeta Module Variables End--> <!--Logos
+ Module-->     <!--Logos Module--> <!--H1 Title Module Variables Begin-->    
+ <!--H1 Title Module Variables End--> <!--H1 Title Tag Module Variables
+ Begin-->       <!--H1 Title Tag Module Variables End--> <!--H2 Title Tag
+ Module Variables Begin-->     <!--H2 Title Tag Module Variables End--> <!--H3
+ Title Tag Module Variables Begin-->     <!--H3 Title Tag Module Variables
+ End--> <!--FreeText Module Variables Begin-->     <!--FreeText Module
+ Variables End--> <!--Bullet List Module Variables Begin-->     <!--Bullet
+ List Module Variables End--> <!--Number List Module Variables Begin-->    
+ <!--Number List Module Variables End--> <!--Circle List Module Variables
+ Begin-->     <!--Circle List Module Variables End--> <!--Square List Module
+ Variables Begin-->     <!--Square List Module Variables End--> <!--Main
+ Section Line Module Variables Begin-->     <!--Main Section Line Module
+ Variables End--> <!--Highlight H1 Tag Module Variables Begin-->                 
+ <!--Highlight H1 Tag Module Variables End--> <!--Highlight H1 Module
+ Variables Begin-->                <!--Highlight H1 Module Variables End-->
+ <!--Highlight H2 Module Variables Begin-->                <!--Highlight H2
+ Module Variables End--> <!--Highlight H2 Image Module Variables Begin-->                
+ <!--Highlight H2 Image Module Variables End--> <!--Highlight H3 Module
+ Variables Begin-->             <!--Highlight H3 Module Variables End-->
+ <!--CTA Primary Button Module Variables Begin-->           <!--CTA Primary
+ Button Module Variables End--> <!--CTA Block Button Module Variables Begin-->              
+ <!--CTA Block Button Module Variables End--> <!--CTA Secondary Button Module
+ Variables Begin-->       <!--CTA Secondary Button Module Variables End-->
+ <!--Other Meta Tags Begin--> <meta http-equiv="Content-Type"
+ content="text/html; charset=UTF-8" /> <meta name="viewport"
+ content="width=device-width, initial-scale=1, minimum-scale=1,
+ maximum-scale=1" /> <meta name="robots" content="noindex,nofollow" /> <meta
+ http-equiv="X-UA-Compatible" content="IE=edge" /> <!--Other Meta Tags End-->
+ <!--[if mso]>      <style type="text/css">        .primary-font {         
+ font-family: Arial, sans-serif !important;        }      </style>   
+ <![endif]--> <!--[if mso]>      <style type="text/css">       
+ .secondary-font {          font-family: Arial, sans-serif !important;       
+ }      </style>    <![endif]--> <!--[if gte mso 9]>      <style
+ type="text/css">        #hero .table3-3 {          width: 100% !important;       
+ }      </style>    <![endif]--> <style>      /*startcommon*/      @media only
+ screen and (max-width: 803px) {        .m_hero .background {         
+ background-size: cover !important;        }      }      /*endcommon*/   
+ </style> <!--[if mso]>      <style>        .outlookbutton {         
+ padding-left: 60px !important;        }      </style>    <![endif]--> <style
+ media="all">      /* CLIENT-SPECIFIC STYLES */      #outlook a {       
+ padding: 0;      }      /* Force Outlook to provide a "view in browser"
+ message */      .ReadMsgBody {        width: 100%;      }      .ExternalClass
+ {        width: 100%;      }      /* Force Hotmail to display emails at full
+ width */      .ExternalClass,      .ExternalClass p,      .ExternalClass
+ span,      .ExternalClass font,      .ExternalClass td,      .ExternalClass
+ div {        line-height: 100%;      }      /* Force Hotmail to display
+ normal line spacing */      /* iOS BLUE LINKS */      @-ms-viewport {       
+ width: device-width;      }    </style> <style type="text/css">      html {       
+ -webkit-text-size-adjust: none;      }      p {        margin: 0 0 10px
+ !important;        padding: 0;      }            body {        font-family:
+ Lato, Calibri, sans-serif;      }      a[x-apple-data-detectors] {       
+ color: inherit !important;        text-decoration: none !important;       
+ font-size: inherit !important;        font-family: inherit !important;       
+ font-weight: inherit !important;        line-height: inherit !important;     
+ }      a {      outline: none !important;      text-decoration: none
+ !important;      color: #0067df;    }    a:visited {      color: #0067df;   
+ }    .button--primary {      color: #ffffff;      outline: none;     
+ text-decoration: none;    }    .button--primary:visited,   
+ .button--primary:visited * {      outline: none;      text-decoration: none;     
+ color: #ffffff;    }    .button--secondary:visited,   
+ .button--secondary:visited * {      outline: none;      text-decoration:
+ none;      color: #000000;    }      @media only screen and (max-width:
+ 640px) {        .tablePartner {width:100%!important;}       
+ .tablePartnerLogo{max-width:50%!important}        .tablePartnerLogo
+ img{max-width:100%!important;height:auto;}       
+ .tablePartnerPartner{max-width:50%!important}        .tablePartnerPartner
+ img{max-width:100%!important;height:auto;}                .em_main_table {         
+ width: 100% !important;        }        .em_spc_20 {          height: 20px
+ !important;        }        .em_hide {          display: none !important;       
+ }        .m_hero .background {          background-size: cover !important;       
+ }        table[class="table600"] {          width: 450px !important;        }       
+ *[class].main {          width: 100% !important;          min-width: 100%
+ !important;        }        *[class].inner_table {          width: 90%
+ !important;          min-width: 90% !important;        }       
+ *[class].block {          width: 100% !important;          margin: 0 auto
+ !important;          padding: 0 !important;          display: block;        }       
+ *[class].center_align {          text-align: center !important;         
+ margin: 0 auto;        }        *[class].left_align {          text-align:
+ left !important;        }        *[class].padding_bottom {         
+ padding-bottom: 20px !important;        }        *[class].padding_top {         
+ padding-top: 20px !important;        }        *[class].image-width img {         
+ width: 100% !important;          height: auto !important;        }       
+ *[class].line-height {          line-height: 36px !important;        }       
+ *[class].button_width {          width: 100% !important;        }       
+ *[class].Video img {          max-width: 100% !important;          height:
+ auto !important;        }        *[class].margin-top {          margin-top:
+ 20px !important;        }        *[class].float {          float: none
+ !important;          margin-top: 14px !important;          display:
+ inline-block;        }        *[class].button_width {          width: 100%
+ !important;        }      }      @media only screen and (max-width: 479px) {       
+ .m_hero .background {          background-size: cover !important;        }       
+ .em_spc_20 {          height: 20px !important;        }        .em_hide {         
+ display: none !important;        }        .em_main_table {          width:
+ 100% !important;        }        table[class="table600"] {          width:
+ 290px !important;        }        *[class].main {          width: 100%
+ !important;          min-width: 100% !important;        }       
+ *[class].inner_table {          width: 90% !important;          min-width:
+ 90% !important;        }        *[class].block {          width: 100%
+ !important;          margin: 0 auto !important;          padding: 0
+ !important;          display: block;        }        *[class].center_align {         
+ text-align: center !important;          margin: 0 auto;        }       
+ *[class].left_align {          text-align: left !important;        }       
+ *[class].padding_top {          padding-top: 20px !important;        }       
+ *[class].padding_bottom {          padding-bottom: 20px !important;        }       
+ *[class].image-width img {          width: 100% !important;          height:
+ auto !important;        }        *[class].img-width img {          width:
+ 100% !important;          height: auto !important;        }       
+ *[class].line-height {          line-height: 36px !important;        }       
+ *[class].button_width {          width: 100% !important;        }       
+ *[class].Video img {          max-width: 100% !important;          height:
+ auto !important;        }        *[class].margin-top {          margin-top:
+ 20px !important;        }        *[class].float {          float: none
+ !important;          margin-top: 14px !important;          display:
+ inline-block;        }        *[class].button_width {          width: 100%
+ !important;        }      }    </style> </head> <body
+ style="background-color:#ffffff;margin-bottom: 0; -webkit-text-size-adjust:
+ 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-right: 0;
+ -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 0; padding-right: 0;
+ padding-left: 0; width: 100%;"><style type="text/css">div#emailPreHeader{
+ display: none !important; }</style><div id="emailPreHeader"
+ style="mso-hide:all; visibility:hidden; opacity:0; color:transparent;
+ mso-line-height-rule:exactly; line-height:0; font-size:0px; overflow:hidden;
+ border-width:0; display:none !important;">Read the 2022
+ =?utf-8?b?R2FydG5lcsKu?= Market Guide for Task-Mining Tools </div> <!--Outer
+ table START--> <table border="0" cellpadding="0" cellspacing="0" width="100%"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;margin:0 auto;"> <tbody> <tr> <td class="outer"
+ valign="top" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust:
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;
+ -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse:
+ collapse;"> <!--Header starts--> <table width="600" class="main"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin:0 auto; border-spacing:
+ 0; border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0"> <tbody><tr> <td bgcolor="#ffffff"
+ style="border-collapse:collapse; background-color:#ffffff;"> <table
+ class="inner_table" style="margin:0 auto;width:470px;" align="center"
+ border="0" cellpadding="0" cellspacing="0" width="470"> <!--Extra Space-->
+ <tbody><tr> <td height="65"
+ style="line-height:65px;font-size:1px;color:#ffffff" bgcolor="#ffffff">
+ &nbsp; </td> </tr> </tbody></table> </td> </tr> </tbody></table> <!--Header
+ ends--> <table class="main" width="600" align="center" id="boxing" border="0"
+ cellpadding="0" cellspacing="0" style="-webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-spacing: 0; border-collapse: collapse;margin:0 auto;min-width:600px;">
+ <tbody><tr> <td class="mktoContainer boxedbackground" id="module-wrapper"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;
+ -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse:
+ collapse;"><table class="mktoModule" id="Logo"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td> <table class="inner_table"
+ style="width: 470px; margin: 0 auto; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="470">
+ <tbody> <tr> <td> <table cellpadding="0" cellspacing="0"> <tbody> <tr> <td>
+ <div class="mktoImg" id="Logo-uip" mktolockimgsize="false"><img alt="Logo"
+ border="0" src="https://start.uipath.com/rs/995-XLT-886/images/UiPath Large
+ Logo Orange.png" width="188" height="68" /></div> </td> </tr> </tbody>
+ </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table><table
+ class="mktoModule" id="H1TitleTag" style="-webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-spacing: 0; border-collapse: collapse;" align="center" border="0"
+ cellpadding="0" cellspacing="0" width="100%"> <tbody> <tr> <td
+ bgcolor="#ffffff" style="background-color:#ffffff"> <table
+ class="inner_table" style="width: 470px; margin: 0 auto; border-collapse:
+ collapse;" align="center" border="0" cellpadding="0" cellspacing="0"
+ width="470"> <tbody> <!--Extra space--> <tr> <td style="line-height: 24px;
+ font-size: 1px;color:#ffffff" height="24" bgcolor="#ffffff"> &nbsp; </td>
+ </tr> <tr> <td style="font-size:18px; color:#000000;
+ font-family:Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:24px; font-weight:bold;" valign="top"> <div
+ id="titlesec-main-sub-title" class="mktoText"> <div> <span style="font-size:
+ 18px;"><strong>New report:</strong></span> <br /> </div> </div> </td> </tr>
+ <tr> <td style="font-size:36px; color:#000000;
+ font-family:Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:44px; font-weight:bold;" valign="top"> <div
+ id="titlesec-main-title" class="mktoText"> <div> <span style="font-size:
+ 34px;"><strong>2022 =?utf-8?b?R2FydG5lcsKu?= Market Guide for Task-Mining
+ Tools</strong></span> </div> </div> </td> </tr> <!--Extra space--> <tr> <td
+ style="line-height: 24px; font-size: 1px;color:#ffffff" height="24"
+ bgcolor="#ffffff"> &nbsp; </td> </tr> </tbody> </table> </td> </tr> </tbody>
+ </table><table class="mktoModule" id="FreeText"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#ffffff"
+ style="background-color:#ffffff"> <table class="inner_table" style="width:
+ 470px; margin: 0 auto; text-align: center; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="470">
+ <!--Extra space--> <tbody> <!--Extra space--> <tr> <td style="line-height:
+ 0px; font-size: 1px;color:#ffffff" height="0" bgcolor="#ffffff"> &nbsp; </td>
+ </tr> <tr> <td style="font-size:16px; color:#000000;
+ font-family:Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:24px;text-align:left;" valign="top"> <div id="FreeTextContent"
+ class="mktoText changeMarginP"> <p><span style="font-family: arial,
+ helvetica, sans-serif; font-size: 14px;">Hi divya,</span></p> <p><span
+ style="font-family: arial, helvetica, sans-serif; font-size: 14px;">Large
+ enterprises often struggle to gather insights on how the tasks are being
+ executed, identify process bottlenecks or employees' knowledge and efficiency
+ gaps. Task mining is a technology paired with artificial intelligence (AI)
+ that captures the work of your most efficient team members to help you
+ optimize processes and maximize ROI from automation.</span></p> <p><span
+ style="font-family: arial, helvetica, sans-serif; font-size: 14px;">The
+ <strong><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2Fn=2FOTk1LVhMVC04ODYAAAGGBhjZ8GsrS?=
+ =?utf-8?q?vLLOwomU6Bo0VDyqSSBf3VsNXNY0LAV-KiQvwuKuECQESxDs6nE9W96oiB6Ql?=
+ =?utf-8?q?M=3D=22?= target="_blank" class="mktNoTok">Gartner Market Guide for
+ Task-Mining Tools</a></strong> describes the state of the task mining market,
+ highlighting its capabilities for identifying automation opportunities,
+ improving the employee experience, and increasing
+ =?utf-8?b?d29ya2Vyc+KAmQ==?= productivity.</span></p> <p><span
+ style="font-family: arial, helvetica, sans-serif; font-size: 14px;">Get your
+ complimentary copy of the Gartner report to learn about the top three use
+ cases for task mining and see how enterprise technology can make your company
+ happier, more efficient, and more profitable today. </span></p> </div> </td>
+ </tr> <!--Extra space--> <tr> <td style="line-height: 20px; font-size:
+ 1px;color:#ffffff;" height="20" bgcolor="#ffffff"> &nbsp; </td> </tr>
+ </tbody> </table> </td> </tr> </tbody> </table><table class="mktoModule"
+ id="CTAPrimary" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust:
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#FFFFFF"
+ style="background-color:#FFFFFF"> <table class="inner_table"
+ style="width:470px; margin: 0 auto; text-align: center; border-collapse:
+ collapse;" align="center" border="0" cellpadding="0" cellspacing="0"
+ width="470"> <!--Extra space--> <tbody> <tr> <td style="line-height: 0px;
+ font-size: 1px;background-color:#FFFFFF;color:#FFFFFF;" height="0"
+ bgcolor="#ffffff"> &nbsp; </td> </tr> <!--CTA button--> <tr> <td valign="top"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;
+ -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse:
+ collapse;"> <div class="mktoText" id="banner-button1"> <table
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse; margin: 0 auto 0 auto;" align="left" border="0"
+ cellspacing="0" cellpadding="0" width="240"> <tbody> <tr border="0"> <td
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;
+ -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse:
+ collapse;" align="center" bgcolor="#fa4616" border="0"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2Fn=2FOTk1LVhMVC04ODYAAAGGBhjZ8GsrS?=
+ =?utf-8?q?vLLOwomU6Bo0VDyqSSBf3VsNXNY0LAV-KiQvwuKuECQESxDs6nE9W96oiB6Ql?=
+ =?utf-8?q?M=3D=22?= target="_blank" class="primary-font button
+ button--primary mktNoTok" style="-webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%; font-size: 16px; font-family:
+ Helvetica,sans-serif; color: #ffffff; display: inline-block; text-decoration:
+ none; background-color: #fa4616; box-sizing: border-box; width: 100%;
+ padding: 16px 18px 16px 18px; border: 1px solid #fa4616;">Read the
+ copy</a></td> </tr> </tbody> </table> </div> </td> </tr> <tr> <td
+ style="line-height: 40px; font-size: 1px;color:#FFFFFF" height="40"
+ bgcolor="#FFFFFF"> &nbsp; </td> </tr> </tbody> </table> </td> </tr> </tbody>
+ </table><table class="mktoModule"
+ id="FreeTextd4aac44d-8511-44c2-b78e-edb1a5268e08"
+ style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%"> <tbody> <tr> <td bgcolor="#ffffff"
+ style="background-color:#ffffff"> <table class="inner_table" style="width:
+ 470px; margin: 0 auto; text-align: center; border-collapse: collapse;"
+ align="center" border="0" cellpadding="0" cellspacing="0" width="470">
+ <!--Extra space--> <tbody> <!--Extra space--> <tr> <td style="line-height:
+ 0px; font-size: 1px;color:#ffffff" height="0" bgcolor="#ffffff"> &nbsp; </td>
+ </tr> <tr> <td style="font-size:16px; color:#000000;
+ font-family:Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height:24px;text-align:left;" valign="top"> <div
+ id="FreeTextContent9856e573-c92e-4535-afbd-81cb873ce594" class="mktoText
+ changeMarginP"> <hr /> <p><em><span style="font-family: arial, helvetica,
+ sans-serif; font-size: 12px;"><span data-contrast="auto"><span
+ data-ccp-parastyle="Normal (Web)"></span></span></span></em></p> <p><span
+ style="font-size: 11px;"><em><span style="font-family: arial, helvetica,
+ sans-serif;"><span data-contrast="auto"><span data-ccp-parastyle="Normal
+ (Web)">Gart</span><span data-ccp-parastyle="Normal (Web)">n</span><span
+ data-ccp-parastyle="Normal (Web)">er,</span> <span data-ccp-parastyle="Normal
+ (Web)">Market Guide for Task-Mining Tools</span><span
+ data-ccp-parastyle="Normal (Web)">,</span> <span data-ccp-parastyle="Normal
+ (Web)">Anirudh </span><span data-ccp-parastyle="Normal
+ (Web)">Ganeshan</span><span data-ccp-parastyle="Normal (Web)">, Marc
+ Kerremans</span><span data-ccp-parastyle="Normal (Web)">,
+ 28</span></span><span data-contrast="auto"><span data-fontsize="11"
+ data-ccp-parastyle="Normal (Web)">th</span></span><span
+ data-contrast="auto"><span data-ccp-parastyle="Normal (Web)"> April
+ 2022</span></span></span></em></span></p> <p><span style="font-size:
+ 11px;"><em><span data-contrast="none" style="font-family: arial, helvetica,
+ sans-serif;"><span data-ccp-parastyle="Normal (Web)">Gartner</span><span
+ data-ccp-parastyle="Normal (Web)"> does not endorse any vendor, product or
+ service depicted in its research publications, and does not advise technology
+ users to select only those vendors with the highest ratings or other
+ designation. Gartner research publications consist of the opinions of
+ Gartner</span><span data-ccp-parastyle="Normal (Web)"> research organization
+ and should not be construed as statements of fact. Gartner disclaims all
+ warranties, expressed or implied, with respect to this research, including
+ any warranties of merchantability or fitness for a particular
+ purpose.</span></span></em></span></p> <p><span style="font-size:
+ 11px;"><em><span style="font-family: arial, helvetica, sans-serif;"><span
+ data-contrast="auto">GARTNER is a registered trademark and service mark of
+ Gartner, Inc. and/or its affiliates in the U.S. and internationally and is
+ used herein with permission. All rights
+ reserved.</span>&nbsp;</span></em></span><span style="margin: 0px; padding:
+ 0px; user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+ transparent; font-size: 11pt; line-height: 18.3458px; font-family:
+ WordVisiCarriageReturn_MSFontService, Arial, Arial_EmbeddedFont,
+ Arial_MSFontService, sans-serif;"><br style="margin: 0px; padding: 0px;
+ user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color:
+ transparent; white-space: pre !important;" /></span></p> </div> </td> </tr>
+ <!--Extra space--> <tr> <td style="line-height: 20px; font-size:
+ 1px;color:#ffffff;" height="20" bgcolor="#ffffff"> &nbsp; </td> </tr>
+ </tbody> </table> </td> </tr> </tbody> </table><table class="mktoModule"
+ id="SectionSpacer" style="-webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+ border-spacing: 0; border-collapse: collapse;" align="center" border="0"
+ cellpadding="0" cellspacing="0" width="100%"> <tbody> <tr> <td
+ bgcolor="#ffffff" style="background-color:#ffffff;line-height: 20px;
+ font-size: 1px;" height="20"> &nbsp; </td> </tr> </tbody> </table></td> </tr>
+ </tbody></table> </td> </tr> </tbody> </table> <!--Outer table End-->
+ <!--Footer Begin--> <div class="mktoSnippet" id="snippetFooter"><table
+ class="main" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust:
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0;
+ border-collapse: collapse; margin: 0 auto; background-color: #f2f2f2;"
+ bgcolor="#f2f2f2" align="center" border="0" cellpadding="0" cellspacing="0"
+ width="600"> <tbody> <tr bgcolor="#f2f2f2" style="background-color:
+ #f2f2f2;"> <td bgcolor="#f2f2f2" style="border-collapse: collapse;
+ background-color: #f2f2f2;"> <table class="inner_table" style="margin: 0
+ auto; width: 500px;" align="center" border="0" cellpadding="0"
+ cellspacing="0" width="500" height="244"><!--Extra Space--> <tbody> <tr> <td
+ height="36" style="line-height: 36px; font-size: 36px;"> <div><br /></div>
+ </td> </tr> <tr></tr> <tr> <td valign="top" style="font-size: 16px; color:
+ #000000; font-family: Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height: 24px;"> <div class="mktoText" mktoname="Address"
+ id="Address-bp"> <div><span style="font-size: 12px;">Visit <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8Z=5FMhF5?=
+ =?utf-8?q?tJXlDrDizpDDaDoQswkZggeaww81l5vwiOLAoGeOzB=5FrLfxekfAxsql6MLE4=3D?=
+ =?utf-8?q?=22?= style="text-decoration: none; color:
+ #0067df;">UiPath</a></span></div> <div><span style="font-size: 12px;">UiPath
+ Inc. | 452 5th Avenue, 22nd Floor New York, NY 10018 United
+ States</span></div> </div> </td> </tr> <!--Extra Space--> <tr> <td
+ height="24" style="line-height: 24px; font-size: 24px;"> <div><br /></div>
+ </td> </tr> <tr> <td valign="top" style="font-size: 16px; color: #000000;
+ font-family: Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height: 24px;"> <div class="mktoText" mktoname="Unsubscribe"
+ id="Links-bp"> <div><span style="font-size: 12px;">To choose the types of
+ emails you receive, or to opt yourself out completely, <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Fstart=2Euipath=2Ecom=2FUnsubscribePage=2Ehtml=3Fmkt=5Funsub?=
+ =?utf-8?q?scribe=3D1&mkt=5Ftok=3DOTk1LVhMVC04ODYAAAGGBhjZ8f2m2lkk693mO9i1T2Gs?=
+ =?utf-8?q?SFTZP2wGRz9Mz71DK4D=5F5ulrMdOlC4QVci=5F4Zdf-KjxYVgSkDtNDGhaSj1ZKI?=
+ =?utf-8?q?39QbJ5PAxq7jhicaZq0tjsmPvY=22?= style="text-decoration: none;
+ color: #0067df;">let us know</a>.</span></div> </div> </td> </tr> <!--Extra
+ Space--> <tr> <td height="24" style="line-height: 24px; font-size: 24px;"><br
+ /></td> </tr> <tr><!--Social Module Begin--> <td valign="top"
+ style="border-collapse: collapse;"> <div class="mktoText"
+ mktoname="SocialIcons" id="SocialIcons"> <table cellpadding="0"
+ cellspacing="0" align="center" border="0" width="100%" style="width: 100%;
+ border-collapse: collapse; margin: 0 auto;"> <tbody> <tr> <td
+ class="line-height" valign="top" align="center" style="margin: 0 auto;
+ text-align: left;"><span style="font-size: 12px;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8YhoVlY?=
+ =?utf-8?q?MG1oiOwejxKxtPQk6WYfMn=5FMCD1ojKB0ydMtioEDej2jD7YSZGKSgUf-k9kk=3D?=
+ =?utf-8?q?=22=3E=3Cimg?=
+ src="https://start.uipath.com/rs/995-XLT-886/images/facebook_gray.png"
+ alt="Facebook" border="0" width="20" /></a>&nbsp;&nbsp; <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8FLZ2=5FL?=
+ =?utf-8?q?Ued5rqp3B2MMZoUR3097x-m5NApeoDxHJ9ZwI-gp2=5Fv66ygADtA4pHegUcr0=3D?=
+ =?utf-8?q?=22=3E=3Cimg?=
+ src="https://start.uipath.com/rs/995-XLT-886/images/twitter_gray.png"
+ alt="Twitter" border="0" width="20" /></a>&nbsp;&nbsp; <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8K=5F0RBY?=
+ =?utf-8?q?bf8okzF8xJvCmFtHYpqSHuacttCocSDePbEHuleBQEqEcYZzEXGAtq6pw1oU=3D?=
+ =?utf-8?q?=22=3E=3Cimg?=
+ src="https://start.uipath.com/rs/995-XLT-886/images/linkedin_gray.png"
+ alt="LinkedIn" border="0" width="20" /></a>&nbsp;&nbsp; <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8WNI7wb?=
+ =?utf-8?q?iHzr8YGV006smPa2-tBV4dL0ryILNuE55tOIf12179PUxpDUhab5aDrPZxQg=3D?=
+ =?utf-8?q?=22=3E=3Cimg?=
+ src="https://start.uipath.com/rs/995-XLT-886/images/youtube.png"
+ alt="Youtube" border="0" width="20" /></a>&nbsp;&nbsp;</span></td> </tr>
+ </tbody> </table> </div> </td> <!--Social Module End--></tr> <!--Extra
+ Space--> <tr> <td height="24" style="line-height: 24px; font-size: 24px;"><br
+ /></td> </tr> <tr> <td valign="top" style="font-size: 16px; color: #000000;
+ font-family: Helvetica,sans-serif; mso-line-height-rule: exactly;
+ line-height: 24px;"> <div class="mktoText" mktoname="Privacy Policy"
+ id="Links-privacy"> <div><span style="font-size: 12px;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8OB9nY9?=
+ =?utf-8?q?GbujJ44hMpML3gCCFSsPgweF4bv0Sf3m1aRJM7XRIH30yGVQ8uwRpTMKsXaU=3D?=
+ =?utf-8?q?=22?= style="text-decoration: none; color: #0067df;">Read privacy
+ policy</a>.</span></div> </div> </td> </tr> <!--Extra Space--> <tr> <td
+ height="36" style="line-height: 36px; font-size: 36px;"><br /></td> </tr>
+ </tbody> </table> </td> </tr> </tbody> </table></div> <!--Footer End-->   <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2FOTk1LVhMVC04ODYAAAGGBhjZ8BuUv0K?=
+ =?utf-8?q?0vkWuzJitftqFt1cCmvoTYXvm9KkkgDZ9MGn3n2A4-RhFcpkXAs2WlOSsqMI=3D?=
+ =?utf-8?q?=22=3E=3C=2Fa=3E=3Cimg?=
+ =?utf-8?q?_src=3D=22https=3A=2F=2Flink=2Euipath=2Ecom=2Ftrk=3Ft=3D1&mid=3DOTk1LVhMVC04ODY6MDoz?=
+ =?utf-8?q?MTE4NzoxNDA0MTg6NjQ2NjA0OjQxNTk2Ojk6MTAyMjU2OjE3NDk1MTAxOmRpd?=
+ =?utf-8?q?nlhZWlkaWtvOUBnbWFpbC5jb20%3D=22?= width="1" height="1"
+ style="display:none !important;" alt="" /></body></html>
+Content-Type: multipart/alternative; boundary="=-x83yVgZg1PYKEihk5XB/hg=="
+
+--=-x83yVgZg1PYKEihk5XB/hg==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <fcff11da-09a1-4be2-bdef-466dda3310ef>
+
+New report:
+2022 Gartner=C2=AE Market Guide for Task-Mining Tools
+Hi divya,
+
+Large enterprises often struggle to gather insights on how the tasks are bei=
+ng executed, identify process bottlenecks or employees' knowledge and effici=
+ency gaps. Task mining is a technology paired with artificial intelligence (=
+AI) that captures the work of your most efficient team members to help you o=
+ptimize processes and maximize ROI from automation.
+
+The Gartner Market Guide for Task-Mining Tools <https://www.uipath.com/resou=
+rces/automation-analyst-reports/gartner-market-guide-for-task-mining-tools?u=
+tm_source=3Dmarketo&utm_medium=3Demail&utm_campaign=3DAR22TMG&utm_content=3D=
+initial> describes the state of the task mining market, highlighting its cap=
+abilities for identifying automation opportunities, improving the employee e=
+xperience, and increasing workers=E2=80=99 productivity.
+
+Get your complimentary copy of the Gartner report to learn about the top thr=
+ee use cases for task mining and see how enterprise technology can make your=
+ company happier, more efficient, and more profitable today.
+${CTAPrimary-Text} <${CTAPrimary-Link}>
+Gartner, Market Guide for Task-Mining Tools, Anirudh Ganeshan, Marc Kerreman=
+s, 28th April 2022
+
+Gartner does not endorse any vendor, product or service depicted in its rese=
+arch publications, and does not advise technology users to select only those=
+ vendors with the highest ratings or other designation. Gartner research pub=
+lications consist of the opinions of Gartner research organization and shoul=
+d not be construed as statements of fact. Gartner disclaims all warranties, =
+expressed or implied, with respect to this research, including any warrantie=
+s of merchantability or fitness for a particular purpose.
+
+GARTNER is a registered trademark and service mark of Gartner, Inc. and/or i=
+ts affiliates in the U.S. and internationally and is used herein with permis=
+sion. All rights reserved.
+Visit UiPath <https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8Z_MhF5tJXlDrD=
+izpDDaDoQswkZggeaww81l5vwiOLAoGeOzB_rLfxekfAxsql6MLE4=3D>
+UiPath Inc. | 90 Park Ave, New York, NY 10016 United States
+
+To choose the types of emails you receive, or to opt yourself out completely=
+, let us know <[[https://start.uipath.com/UnsubscribePage.html?mkt_unsubscri=
+be=3D1&mkt_tok=3DOTk1LVhMVC04ODYAAAGGBhjZ8f2m2lkk693mO9i1T2GsSFTZP2wGRz9Mz71=
+DK4D_5ulrMdOlC4QVci_4Zdf-KjxYVgSkDtNDGhaSj1ZKI39QbJ5PAxq7jhicaZq0tjsmPvY]]>.
+
+ <https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8YhoVlYMG1oiOwejxKxtPQk6WY=
+fMn_MCD1ojKB0ydMtioEDej2jD7YSZGKSgUf-k9kk=3D>    <https://link.uipath.com/OT=
+k1LVhMVC04ODYAAAGGBhjZ8FLZ2_LUed5rqp3B2MMZoUR3097x-m5NApeoDxHJ9ZwI-gp2_v66yg=
+ADtA4pHegUcr0=3D>    <https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8K_0RB=
+Ybf8okzF8xJvCmFtHYpqSHuacttCocSDePbEHuleBQEqEcYZzEXGAtq6pw1oU=3D>    <https:=
+//link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8WNI7wbiHzr8YGV006smPa2-tBV4dL0ryI=
+LNuE55tOIf12179PUxpDUhab5aDrPZxQg=3D> =20
+
+Read privacy policy <https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8OB9nY9=
+GbujJ44hMpML3gCCFSsPgweF4bv0Sf3m1aRJM7XRIH30yGVQ8uwRpTMKsXaU=3D>.
+
+--=-x83yVgZg1PYKEihk5XB/hg==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <2687c75a-8d5e-4511-ac02-f23965437f1b>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w=
+3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>=20
+<!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->=20
+<!--Global Variables Begin-->          =20
+<!--Global Variables End-->=20
+<!--FullWidthImage Module Variables Begin--> =20
+<!--FullWidthImage Module Variables End-->=20
+<!--InlineImage Module Variables Begin--> =20
+<!--InlineImage Module Variables End-->=20
+<!--InlineImageMeta Module Variables Begin-->   =20
+<!--InlineImageMeta Module Variables End-->=20
+<!--Logos Module-->    =20
+<!--Logos Module-->=20
+<!--H1 Title Module Variables Begin-->    =20
+<!--H1 Title Module Variables End-->=20
+<!--H1 Title Tag Module Variables Begin-->      =20
+<!--H1 Title Tag Module Variables End-->=20
+<!--H2 Title Tag Module Variables Begin-->    =20
+<!--H2 Title Tag Module Variables End-->=20
+<!--H3 Title Tag Module Variables Begin-->    =20
+<!--H3 Title Tag Module Variables End-->=20
+<!--FreeText Module Variables Begin-->    =20
+<!--FreeText Module Variables End-->=20
+<!--Bullet List Module Variables Begin-->    =20
+<!--Bullet List Module Variables End-->=20
+<!--Number List Module Variables Begin-->    =20
+<!--Number List Module Variables End-->=20
+<!--Circle List Module Variables Begin-->    =20
+<!--Circle List Module Variables End-->=20
+<!--Square List Module Variables Begin-->    =20
+<!--Square List Module Variables End-->=20
+<!--Main Section Line Module Variables Begin-->    =20
+<!--Main Section Line Module Variables End-->=20
+<!--Highlight H1 Tag Module Variables Begin-->                 =20
+<!--Highlight H1 Tag Module Variables End-->=20
+<!--Highlight H1 Module Variables Begin-->               =20
+<!--Highlight H1 Module Variables End-->=20
+<!--Highlight H2 Module Variables Begin-->               =20
+<!--Highlight H2 Module Variables End-->=20
+<!--Highlight H2 Image Module Variables Begin-->                =20
+<!--Highlight H2 Image Module Variables End-->=20
+<!--Highlight H3 Module Variables Begin-->            =20
+<!--Highlight H3 Module Variables End-->=20
+<!--CTA Primary Button Module Variables Begin-->          =20
+<!--CTA Primary Button Module Variables End-->=20
+<!--CTA Block Button Module Variables Begin-->              =20
+<!--CTA Block Button Module Variables End-->=20
+<!--CTA Secondary Button Module Variables Begin-->      =20
+<!--CTA Secondary Button Module Variables End-->=20
+<!--Other Meta Tags Begin-->=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1, =
+minimum-scale=3D1, maximum-scale=3D1" />=20
+<meta name=3D"robots" content=3D"noindex,nofollow" />=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+<!--Other Meta Tags End-->=20
+<!--[if mso]>
+      <style type=3D"text/css">
+        .primary-font {
+          font-family: Arial, sans-serif !important;
+        }
+      </style>
+    <![endif]-->=20
+<!--[if mso]>
+      <style type=3D"text/css">
+        .secondary-font {
+          font-family: Arial, sans-serif !important;
+        }
+      </style>
+    <![endif]-->=20
+<!--[if gte mso 9]>
+      <style type=3D"text/css">
+        #hero .table3-3 {
+          width: 100% !important;
+        }
+      </style>
+    <![endif]-->=20
+<style>
+      /*startcommon*/
+      @media only screen and (max-width: 803px) {
+        .m_hero .background {
+          background-size: cover !important;
+        }
+      }
+
+      /*endcommon*/
+    </style>=20
+<!--[if mso]>
+      <style>
+        .outlookbutton {
+          padding-left: 60px !important;
+        }
+      </style>
+    <![endif]-->=20
+<style media=3D"all">
+      /* CLIENT-SPECIFIC STYLES */
+      #outlook a {
+        padding: 0;
+      }
+
+      /* Force Outlook to provide a "view in browser" message */
+      .ReadMsgBody {
+        width: 100%;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      /* Force Hotmail to display emails at full width */
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+      /* Force Hotmail to display normal line spacing */
+      /* iOS BLUE LINKS */
+      @-ms-viewport {
+        width: device-width;
+      }
+    </style>=20
+<style type=3D"text/css">
+      html {
+        -webkit-text-size-adjust: none;
+      }
+
+      p {
+        margin: 0 0 10px !important;
+        padding: 0;
+      }
+     =20
+      body {
+        font-family: Lato, Calibri, sans-serif;
+      }
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      a {
+      outline: none !important;
+      text-decoration: none !important;
+      color: #0067df;
+    }
+
+    a:visited {
+      color: #0067df;
+    }
+
+    .button--primary {
+      color: #ffffff;
+      outline: none;
+      text-decoration: none;
+    }
+
+    .button--primary:visited,
+    .button--primary:visited * {
+      outline: none;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .button--secondary:visited,
+    .button--secondary:visited * {
+      outline: none;
+      text-decoration: none;
+      color: #000000;
+    }
+
+      @media only screen and (max-width: 640px) {
+        .tablePartner {width:100%!important;}
+        .tablePartnerLogo{max-width:50%!important}
+        .tablePartnerLogo img{max-width:100%!important;height:auto;}
+        .tablePartnerPartner{max-width:50%!important}
+        .tablePartnerPartner img{max-width:100%!important;height:auto;}
+       =20
+        .em_main_table {
+          width: 100% !important;
+        }
+
+        .em_spc_20 {
+          height: 20px !important;
+        }
+
+        .em_hide {
+          display: none !important;
+        }
+
+        .m_hero .background {
+          background-size: cover !important;
+        }
+
+        table[class=3D"table600"] {
+          width: 450px !important;
+        }
+
+        *[class].main {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
+
+        *[class].inner_table {
+          width: 90% !important;
+          min-width: 90% !important;
+        }
+
+        *[class].block {
+          width: 100% !important;
+          margin: 0 auto !important;
+          padding: 0 !important;
+          display: block;
+        }
+
+        *[class].center_align {
+          text-align: center !important;
+          margin: 0 auto;
+        }
+
+        *[class].left_align {
+          text-align: left !important;
+        }
+
+        *[class].padding_bottom {
+          padding-bottom: 20px !important;
+        }
+
+        *[class].padding_top {
+          padding-top: 20px !important;
+        }
+
+        *[class].image-width img {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        *[class].line-height {
+          line-height: 36px !important;
+        }
+
+        *[class].button_width {
+          width: 100% !important;
+        }
+
+        *[class].Video img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+
+        *[class].margin-top {
+          margin-top: 20px !important;
+        }
+
+        *[class].float {
+          float: none !important;
+          margin-top: 14px !important;
+          display: inline-block;
+        }
+
+        *[class].button_width {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 479px) {
+        .m_hero .background {
+          background-size: cover !important;
+        }
+
+        .em_spc_20 {
+          height: 20px !important;
+        }
+
+        .em_hide {
+          display: none !important;
+        }
+
+        .em_main_table {
+          width: 100% !important;
+        }
+
+        table[class=3D"table600"] {
+          width: 290px !important;
+        }
+
+        *[class].main {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
+
+        *[class].inner_table {
+          width: 90% !important;
+          min-width: 90% !important;
+        }
+
+        *[class].block {
+          width: 100% !important;
+          margin: 0 auto !important;
+          padding: 0 !important;
+          display: block;
+        }
+
+        *[class].center_align {
+          text-align: center !important;
+          margin: 0 auto;
+        }
+
+        *[class].left_align {
+          text-align: left !important;
+        }
+
+        *[class].padding_top {
+          padding-top: 20px !important;
+        }
+
+        *[class].padding_bottom {
+          padding-bottom: 20px !important;
+        }
+
+        *[class].image-width img {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        *[class].img-width img {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        *[class].line-height {
+          line-height: 36px !important;
+        }
+
+        *[class].button_width {
+          width: 100% !important;
+        }
+
+        *[class].Video img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+
+        *[class].margin-top {
+          margin-top: 20px !important;
+        }
+
+        *[class].float {
+          float: none !important;
+          margin-top: 14px !important;
+          display: inline-block;
+        }
+
+        *[class].button_width {
+          width: 100% !important;
+        }
+      }
+    </style>=20
+</head>=20
+<body style=3D"background-color:#ffffff;margin-bottom: 0; -webkit-text-size-=
+adjust: 100%; padding-bottom: 0; min-width: 100%; margin-top: 0; margin-righ=
+t: 0; -ms-text-size-adjust: 100%; margin-left: 0; padding-top: 0; padding-ri=
+ght: 0; padding-left: 0; width: 100%;"><style type=3D"text/css">div#emailPre=
+Header{ display: none !important; }</style><div id=3D"emailPreHeader" style=3D=
+"mso-hide:all; visibility:hidden; opacity:0; color:transparent; mso-line-hei=
+ght-rule:exactly; line-height:0; font-size:0px; overflow:hidden; border-widt=
+h:0; display:none !important;">Read the 2022 Gartner=C2=AE Market Guide for =
+Task-Mining Tools </div>=20
+<!--Outer table START-->=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collap=
+se;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"outer" valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; wo=
+rd-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: no=
+ne; border-collapse: collapse;">=20
+<!--Header starts-->=20
+<table width=3D"600" class=3D"main" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; m=
+argin:0 auto; border-spacing: 0; border-collapse: collapse;" align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"border-collapse:collapse; background-color:=
+#ffffff;">=20
+<table class=3D"inner_table" style=3D"margin:0 auto;width:470px;" align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"470">=20
+<!--Extra Space-->=20
+<tbody>
+<tr>=20
+<td height=3D"65" style=3D"line-height:65px;font-size:1px;color:#ffffff" bgc=
+olor=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--Header ends-->=20
+<table class=3D"main" width=3D"600" align=3D"center" id=3D"boxing" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; border-spacing: 0; border-collapse: collapse;margin:0 auto;min-width:600p=
+x;">=20
+<tbody>
+<tr>=20
+<td class=3D"mktoContainer boxedbackground" id=3D"module-wrapper" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-hyphens: none; =
+-moz-hyphens: none; hyphens: none; border-collapse: collapse;">
+<table class=3D"mktoModule" id=3D"Logo" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; border-spacing: 0; border-collapse: collapse;" align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td>=20
+<table class=3D"inner_table" style=3D"width: 470px; margin: 0 auto; border-c=
+ollapse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"470">=20
+<tbody>=20
+<tr>=20
+<td>=20
+<table cellpadding=3D"0" cellspacing=3D"0">=20
+<tbody>=20
+<tr>=20
+<td>=20
+<div class=3D"mktoImg" id=3D"Logo-uip" mktolockimgsize=3D"false">
+<img alt=3D"Logo" border=3D"0" src=3D"https://start.uipath.com/rs/995-XLT-88=
+6/images/UiPath Large Logo Orange.png" width=3D"188" height=3D"68" />
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"H1TitleTag" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff">=20
+<table class=3D"inner_table" style=3D"width: 470px; margin: 0 auto; border-c=
+ollapse: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"470">=20
+<tbody>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 24px; font-size: 1px;color:#ffffff" height=3D"24" =
+bgcolor=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:18px; color:#000000; font-family:Helvetica,sans-serif=
+; mso-line-height-rule: exactly; line-height:24px; font-weight:bold;" valign=
+=3D"top">=20
+<div id=3D"titlesec-main-sub-title" class=3D"mktoText">=20
+<div>=20
+<span style=3D"font-size: 18px;"><strong>New report:</strong></span>=20
+<br />=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:36px; color:#000000; font-family:Helvetica,sans-serif=
+; mso-line-height-rule: exactly; line-height:44px; font-weight:bold;" valign=
+=3D"top">=20
+<div id=3D"titlesec-main-title" class=3D"mktoText">=20
+<div>=20
+<span style=3D"font-size: 34px;"><strong>2022 Gartner=C2=AE Market Guide for=
+ Task-Mining Tools</strong></span>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 24px; font-size: 1px;color:#ffffff" height=3D"24" =
+bgcolor=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeText" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff">=20
+<table class=3D"inner_table" style=3D"width: 470px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"470">=20
+<!--Extra space-->=20
+<tbody>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 1px;color:#ffffff" height=3D"0" bg=
+color=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:16px; color:#000000; font-family:Helvetica,sans-serif=
+; mso-line-height-rule: exactly; line-height:24px;text-align:left;" valign=3D=
+"top">=20
+<div id=3D"FreeTextContent" class=3D"mktoText changeMarginP">=20
+<p><span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px=
+;">Hi divya,</span></p>=20
+<p><span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px=
+;">Large enterprises often struggle to gather insights on how the tasks are =
+being executed, identify process bottlenecks or employees' knowledge and eff=
+iciency gaps. Task mining is a technology paired with artificial intelligenc=
+e (AI) that captures the work of your most efficient team members to help yo=
+u optimize processes and maximize ROI from automation.</span></p>=20
+<p><span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px=
+;">The <strong><a href=3D
+"https://link.uipath.com/n/OTk1LVhMVC04ODYAAAGGBhjZ8GsrSvLLOwomU6Bo0VDyqSSBf=
+3VsNXNY0LAV-KiQvwuKuECQESxDs6nE9W96oiB6QlM=3D" target=3D"_blank" class=3D"mk=
+tNoTok"
+>Gartner Market Guide for Task-Mining Tools</a></strong> describes the state=
+ of the task mining market, highlighting its capabilities for identifying au=
+tomation opportunities, improving the employee experience, and increasing wo=
+rkers=E2=80=99 productivity.</span></p>=20
+<p><span style=3D"font-family: arial, helvetica, sans-serif; font-size: 14px=
+;">Get your complimentary copy of the Gartner report to learn about the top =
+three use cases for task mining and see how enterprise technology can make y=
+our company happier, more efficient, and more profitable today. </span></p>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 20px; font-size: 1px;color:#ffffff;" height=3D"20"=
+ bgcolor=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"CTAPrimary" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF">=20
+<table class=3D"inner_table" style=3D"width:470px; margin: 0 auto; text-alig=
+n: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"470">=20
+<!--Extra space-->=20
+<tbody>=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 1px;background-color:#FFFFFF;color=
+:#FFFFFF;" height=3D"0" bgcolor=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+<!--CTA button-->=20
+<tr>=20
+<td valign=3D"top" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-colla=
+pse: collapse;">=20
+<div class=3D"mktoText" id=3D"banner-button1">=20
+<table style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-coll=
+apse: collapse; margin: 0 auto 0 auto;" align=3D"left" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"240">=20
+<tbody>=20
+<tr border=3D"0">=20
+<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word; -webkit-h=
+yphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse;"=
+ align=3D"center" bgcolor=3D"#fa4616" border=3D"0"><a href=3D
+"https://link.uipath.com/n/OTk1LVhMVC04ODYAAAGGBhjZ8GsrSvLLOwomU6Bo0VDyqSSBf=
+3VsNXNY0LAV-KiQvwuKuECQESxDs6nE9W96oiB6QlM=3D" target=3D"_blank" class=3D"pr=
+imary-font button button--primary mktNoTok" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; font-size: 16px; font-family: Helvetica=
+,sans-serif; color: #ffffff; display: inline-block; text-decoration: none; b=
+ackground-color: #fa4616; box-sizing: border-box; width: 100%; padding: 16px=
+ 18px 16px 18px; border: 1px solid #fa4616;"
+>Read the copy</a></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"line-height: 40px; font-size: 1px;color:#FFFFFF" height=3D"40" =
+bgcolor=3D"#FFFFFF"> &nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"FreeTextd4aac44d-8511-44c2-b78e-edb1a5268e=
+08" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso=
+-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collaps=
+e: collapse;" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff">=20
+<table class=3D"inner_table" style=3D"width: 470px; margin: 0 auto; text-ali=
+gn: center; border-collapse: collapse;" align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"470">=20
+<!--Extra space-->=20
+<tbody>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 0px; font-size: 1px;color:#ffffff" height=3D"0" bg=
+color=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size:16px; color:#000000; font-family:Helvetica,sans-serif=
+; mso-line-height-rule: exactly; line-height:24px;text-align:left;" valign=3D=
+"top">=20
+<div id=3D"FreeTextContent9856e573-c92e-4535-afbd-81cb873ce594" class=3D"mkt=
+oText changeMarginP">=20
+<hr />=20
+<p><em><span style=3D"font-family: arial, helvetica, sans-serif; font-size: =
+12px;"><span data-contrast=3D"auto"><span data-ccp-parastyle=3D"Normal (Web)=
+"></span></span></span></em></p>=20
+<p><span style=3D"font-size: 11px;"><em><span style=3D"font-family: arial, h=
+elvetica, sans-serif;"><span data-contrast=3D"auto"><span data-ccp-parastyle=
+=3D"Normal (Web)">Gart</span><span data-ccp-parastyle=3D"Normal (Web)">n</sp=
+an><span data-ccp-parastyle=3D"Normal (Web)">er,</span> <span data-ccp-paras=
+tyle=3D"Normal (Web)">Market Guide for Task-Mining Tools</span><span data-cc=
+p-parastyle=3D"Normal (Web)">,</span> <span data-ccp-parastyle=3D"Normal (We=
+b)">Anirudh </span><span data-ccp-parastyle=3D"Normal (Web)">Ganeshan</span>=
+<span data-ccp-parastyle=3D"Normal (Web)">, Marc Kerremans</span><span data-=
+ccp-parastyle=3D"Normal (Web)">, 28</span></span><span data-contrast=3D"auto=
+"><span data-fontsize=3D"11" data-ccp-parastyle=3D"Normal (Web)">th</span></=
+span><span data-contrast=3D"auto"><span data-ccp-parastyle=3D"Normal (Web)">=
+ April 2022</span></span></span></em></span></p>=20
+<p><span style=3D"font-size: 11px;"><em><span data-contrast=3D"none" style=3D=
+"font-family: arial, helvetica, sans-serif;"><span data-ccp-parastyle=3D"Nor=
+mal (Web)">Gartner</span><span data-ccp-parastyle=3D"Normal (Web)"> does not=
+ endorse any vendor, product or service depicted in its research publication=
+s, and does not advise technology users to select only those vendors with th=
+e highest ratings or other designation. Gartner research publications consis=
+t of the opinions of Gartner</span><span data-ccp-parastyle=3D"Normal (Web)"=
+> research organization and should not be construed as statements of fact. G=
+artner disclaims all warranties, expressed or implied, with respect to this =
+research, including any warranties of merchantability or fitness for a parti=
+cular purpose.</span></span></em></span></p>=20
+<p><span style=3D"font-size: 11px;"><em><span style=3D"font-family: arial, h=
+elvetica, sans-serif;"><span data-contrast=3D"auto">GARTNER is a registered =
+trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S=
+. and internationally and is used herein with permission. All rights reserve=
+d.</span>&nbsp;</span></em></span><span style=3D"margin: 0px; padding: 0px; =
+user-select: text; -webkit-user-drag: none; -webkit-tap-highlight-color: tra=
+nsparent; font-size: 11pt; line-height: 18.3458px; font-family: WordVisiCarr=
+iageReturn_MSFontService, Arial, Arial_EmbeddedFont, Arial_MSFontService, sa=
+ns-serif;"><br style=3D"margin: 0px; padding: 0px; user-select: text; -webki=
+t-user-drag: none; -webkit-tap-highlight-color: transparent; white-space: pr=
+e !important;" /></span></p>=20
+</div> </td>=20
+</tr>=20
+<!--Extra space-->=20
+<tr>=20
+<td style=3D"line-height: 20px; font-size: 1px;color:#ffffff;" height=3D"20"=
+ bgcolor=3D"#ffffff"> &nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"SectionSpacer" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-r=
+space: 0pt; border-spacing: 0; border-collapse: collapse;" align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;line-height: 20px;=
+ font-size: 1px;" height=3D"20"> &nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--Outer table End-->=20
+<!--Footer Begin-->=20
+<div class=3D"mktoSnippet" id=3D"snippetFooter">
+<table class=3D"main" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing:=
+ 0; border-collapse: collapse; margin: 0 auto; background-color: #f2f2f2;" b=
+gcolor=3D"#f2f2f2" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"600">=20
+<tbody>=20
+<tr bgcolor=3D"#f2f2f2" style=3D"background-color: #f2f2f2;">=20
+<td bgcolor=3D"#f2f2f2" style=3D"border-collapse: collapse; background-color=
+: #f2f2f2;">=20
+<table class=3D"inner_table" style=3D"margin: 0 auto; width: 500px;" align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"500" heig=
+ht=3D"244">
+<!--Extra Space-->=20
+<tbody>=20
+<tr>=20
+<td height=3D"36" style=3D"line-height: 36px; font-size: 36px;">=20
+<div>
+<br />
+</div> </td>=20
+</tr>=20
+<tr></tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"font-size: 16px; color: #000000; font-family: He=
+lvetica,sans-serif; mso-line-height-rule: exactly; line-height: 24px;">=20
+<div class=3D"mktoText" mktoname=3D"Address" id=3D"Address-bp">=20
+<div>
+<span style=3D"font-size: 12px;">Visit <a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8Z_MhF5tJXlDrDizpDDaDoQswkZ=
+ggeaww81l5vwiOLAoGeOzB_rLfxekfAxsql6MLE4=3D" style=3D"text-decoration: none;=
+ color: #0067df;"
+>UiPath</a></span>
+</div>=20
+<div>
+<span style=3D"font-size: 12px;">UiPath Inc. | 452 5th Avenue, 22nd Floor Ne=
+w York, NY 10018 United States</span>
+</div>=20
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"24" style=3D"line-height: 24px; font-size: 24px;">=20
+<div>
+<br />
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"font-size: 16px; color: #000000; font-family: He=
+lvetica,sans-serif; mso-line-height-rule: exactly; line-height: 24px;">=20
+<div class=3D"mktoText" mktoname=3D"Unsubscribe" id=3D"Links-bp">=20
+<div>
+<span style=3D"font-size: 12px;">To choose the types of emails you receive, =
+or to opt yourself out completely, <a href=3D"https://start.uipath.com/Unsub=
+scribePage.html?mkt_unsubscribe=3D1&mkt_tok=3DOTk1LVhMVC04ODYAAAGGBhjZ8f2m2l=
+kk693mO9i1T2GsSFTZP2wGRz9Mz71DK4D_5ulrMdOlC4QVci_4Zdf-KjxYVgSkDtNDGhaSj1ZKI3=
+9QbJ5PAxq7jhicaZq0tjsmPvY" style=3D"text-decoration: none; color: #0067df;">=
+let us know</a>.</span>
+</div>=20
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"24" style=3D"line-height: 24px; font-size: 24px;"><br /></td>=20
+</tr>=20
+<tr>
+<!--Social Module Begin-->=20
+<td valign=3D"top" style=3D"border-collapse: collapse;">=20
+<div class=3D"mktoText" mktoname=3D"SocialIcons" id=3D"SocialIcons">=20
+<table cellpadding=3D"0" cellspacing=3D"0" align=3D"center" border=3D"0" wid=
+th=3D"100%" style=3D"width: 100%; border-collapse: collapse; margin: 0 auto;=
+">=20
+<tbody>=20
+<tr>=20
+<td class=3D"line-height" valign=3D"top" align=3D"center" style=3D"margin: 0=
+ auto; text-align: left;"><span style=3D"font-size: 12px;"><a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8YhoVlYMG1oiOwejxKxtPQk6WYf=
+Mn_MCD1ojKB0ydMtioEDej2jD7YSZGKSgUf-k9kk=3D"
+><img src=3D"https://start.uipath.com/rs/995-XLT-886/images/facebook_gray.pn=
+g" alt=3D"Facebook" border=3D"0" width=3D"20" /></a>&nbsp;&nbsp; <a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8FLZ2_LUed5rqp3B2MMZoUR3097=
+x-m5NApeoDxHJ9ZwI-gp2_v66ygADtA4pHegUcr0=3D"
+><img src=3D"https://start.uipath.com/rs/995-XLT-886/images/twitter_gray.png=
+" alt=3D"Twitter" border=3D"0" width=3D"20" /></a>&nbsp;&nbsp; <a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8K_0RBYbf8okzF8xJvCmFtHYpqS=
+HuacttCocSDePbEHuleBQEqEcYZzEXGAtq6pw1oU=3D"
+><img src=3D"https://start.uipath.com/rs/995-XLT-886/images/linkedin_gray.pn=
+g" alt=3D"LinkedIn" border=3D"0" width=3D"20" /></a>&nbsp;&nbsp; <a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8WNI7wbiHzr8YGV006smPa2-tBV=
+4dL0ryILNuE55tOIf12179PUxpDUhab5aDrPZxQg=3D"
+><img src=3D"https://start.uipath.com/rs/995-XLT-886/images/youtube.png" alt=
+=3D"Youtube" border=3D"0" width=3D"20" /></a>&nbsp;&nbsp;</span></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+<!--Social Module End-->
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"24" style=3D"line-height: 24px; font-size: 24px;"><br /></td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"font-size: 16px; color: #000000; font-family: He=
+lvetica,sans-serif; mso-line-height-rule: exactly; line-height: 24px;">=20
+<div class=3D"mktoText" mktoname=3D"Privacy Policy" id=3D"Links-privacy">=20
+<div>
+<span style=3D"font-size: 12px;"><a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8OB9nY9GbujJ44hMpML3gCCFSsP=
+gweF4bv0Sf3m1aRJM7XRIH30yGVQ8uwRpTMKsXaU=3D" style=3D"text-decoration: none;=
+ color: #0067df;"
+>Read privacy policy</a>.</span>
+</div>=20
+</div> </td>=20
+</tr>=20
+<!--Extra Space-->=20
+<tr>=20
+<td height=3D"36" style=3D"line-height: 36px; font-size: 36px;"><br /></td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+</div>=20
+<!--Footer End-->  =20
+<a href=3D
+"https://link.uipath.com/OTk1LVhMVC04ODYAAAGGBhjZ8BuUv0K0vkWuzJitftqFt1cCmvo=
+TYXvm9KkkgDZ9MGn3n2A4-RhFcpkXAs2WlOSsqMI=3D"
+></a>
+<img src=3D"https://link.uipath.com/trk?t=3D1&mid=3DOTk1LVhMVC04ODY6MDozMTE4=
+NzoxNDA0MTg6NjQ2NjA0OjQxNTk2Ojk6MTAyMjU2OjE3NDk1MTAxOmRpdnlhZWlkaWtvOUBnbWFp=
+bC5jb20%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" alt=3D=
+"" />
+</body>
+</html>
+--=-x83yVgZg1PYKEihk5XB/hg==--
